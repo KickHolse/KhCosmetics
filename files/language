@@ -1,0 +1,13 @@
+messages:
+  equip:
+    clothes: '&6[Colecionáveis] &aVocê equipou a roupa &f{clothe}&a.'
+    pets: '&6[Colecionáveis] &aVocê equipou o pet &f{pet}&a.'
+  remove:
+    clothes: '&6[Colecionáveis] &cVocê removeu sua roupa.'
+    pets: '&6[Colecionáveis] &cVocê removeu seu pet.'
+  not-have:
+    clothes: '&cVocê não possui esta ROUPA.'
+    pets: '&cVocê não possui este PET.'
+  cooldown:
+    clothes:
+      iron-man: '&cVocê deve esperar &e{time} &cpara voar novamente!'
