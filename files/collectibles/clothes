@@ -1,6 +1,8 @@
 clothes:
   flash:
-    helmet: 'color>BLUE : item>LEATHER_HELMET : named>&aCapacete'
-    chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aColete'
-    leggings: 'color>GREEN : item>LEATHER_LEGGINGS : named>&aCalça'
-    boots: 'color>GRAY : item>LEATHER_BOOTS : named>&aBota'
+    name: '&aFlash'
+    armor:
+      helmet: 'color>RED : item>LEATHER_HELMET : named>&aFlash'
+      chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aFlash'
+      leggings: 'color>RED : item>LEATHER_LEGGINGS : named>&aFlash'
+      boots: 'color>RED : item>LEATHER_BOOTS : named>&aFlash'
