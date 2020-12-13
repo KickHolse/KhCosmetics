@@ -1,13 +1,13 @@
 clothes:
   flash:
-    name: '&aFlash'
+    name: 'Flash'
     armor:
       helmet: 'color>RED : item>LEATHER_HELMET : named>&aCapacete'
       chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aColete'
       leggings: 'color>BLUE : item>LEATHER_LEGGINGS : named>&aCalça'
       boots: 'color>RED : item>LEATHER_BOOTS : named>&aBotas'
   ironman:
-    name: '&aHomem de Ferro'
+    name: 'Homem de Ferro'
     armor:
       helmet: 'color>RED : item>LEATHER_HELMET : named>&aCapacete'
       chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aColete'
