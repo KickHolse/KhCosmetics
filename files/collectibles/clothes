@@ -9,7 +9,7 @@ clothes:
   ironman:
     name: 'Homem de Ferro'
     armor:
-      helmet: 'color>RED : item>LEATHER_HELMET : named>&aCapacete'
+      helmet: 'color>RED : item>HEAD:owner=69Kikinho69 : named>&aCapacete'
       chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aColete'
       leggings: 'color>YELLOW : item>LEATHER_LEGGINGS : named>&aCalça'
       boots: 'color>RED : item>LEATHER_BOOTS : named>&aBotas'
