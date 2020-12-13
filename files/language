@@ -1,3 +1,9 @@
+# Skript feito por Kiberzn
+# Discord: a-zn#4375
+
+lobby:
+  hotbar:
+    collectibles: 'slot>4 : item>PUFFERFISH : named>&aColecionáveis &7(Clique direito) : lore>&7Se divirta com nossos cosméticos!'
 messages:
   equip:
     clothes: '&6[Colecionáveis] &aVocê equipou a roupa &f{clothe}&a.'
