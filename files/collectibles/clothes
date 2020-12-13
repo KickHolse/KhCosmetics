@@ -1,14 +1,6 @@
 clothes:
   flash:
-    usage: '&cUtilize /warn <mensagem>'
-    helmet: 'color>RED : item>LEATHER_HELMET : named>&aFlash'
-    chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aFlash'
-    leggings: 'color>RED : item>LEATHER_LEGGINGS : named>&aFlash'
-    boots: 'color>RED : item>LEATHER_BOOTS : named>&aFlash'
-    action-bar:
-      enable: true
-      format: '&6{player}&a:&f {warn}'
-    title:
-      enable: true
-      title: '&c&lAVISO'
-      subtitle: '&7Olhe o chat!'
+    helmet: 'color>BLUE : item>LEATHER_HELMET : named>&aCapacete'
+    chestplate: 'color>RED : item>LEATHER_CHESTPLATE : named>&aColete'
+    leggings: 'color>GREEN : item>LEATHER_LEGGINGS : named>&aCalça'
+    boots: 'color>GRAY : item>LEATHER_BOOTS : named>&aBota'
