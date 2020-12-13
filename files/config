@@ -1,0 +1,17 @@
+settings:
+# Default pet name.
+  name-pet: '&fPet de &9{player}'
+# Item slot that can come in gadgets and clothes: 0-8
+  slot-clothes-gadgets: 4
+
+menu-item:
+# The name of the selector.
+  name: '&aColecionaveis'
+# The material of the selector.
+  material: pufferfish
+# Slot: 0-8
+  slot: 5
+
+# List of the worlds where cosmetics are enabled!
+enabled-worlds:
+- world
