@@ -1,0 +1,4 @@
+banners:
+  nether-portal:
+    name: 'Portal do Inferno'
+    flag: '{HideFlags: 32,BlockEntityTag:{Base:5,Patterns:[{Pattern:ss,Color:13},{Pattern:bri,Color:5},{Pattern:cbo,Color:13},{Pattern:bo,Color:0}]}}'
