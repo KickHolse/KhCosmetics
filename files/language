@@ -7,11 +7,14 @@ lobby:
 messages:
   selected:
     none:
+      banners: 'Nenhum'
       clothes: 'Nenhuma'
   equip:
+    banners: '&6[Colecionáveis] &aVocê equipou o banner &f{banner}&a.'
     clothes: '&6[Colecionáveis] &aVocê equipou a roupa &f{clothe}&a.'
     pets: '&6[Colecionáveis] &aVocê equipou o pet &f{pet}&a.'
   remove:
+    banners: '&6[Colecionáveis] &cVocê removeu seu banner.'
     clothes: '&6[Colecionáveis] &cVocê removeu sua roupa.'
     pets: '&6[Colecionáveis] &cVocê removeu seu pet.'
   not-have:
