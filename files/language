@@ -9,6 +9,8 @@ messages:
     none:
       banners: 'Nenhum'
       clothes: 'Nenhuma'
+      hats: 'Nenhum'
+      pets: 'Nenhum'
   equip:
     banners: '&6[Colecionáveis] &aVocê equipou o banner &f{banner}&a.'
     clothes: '&6[Colecionáveis] &aVocê equipou a roupa &f{clothe}&a.'
