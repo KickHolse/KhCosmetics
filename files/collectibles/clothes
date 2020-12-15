@@ -27,3 +27,10 @@ clothes:
       chestplate: 'color>BLACK : item>LEATHER_CHESTPLATE : named>&aColete'
       leggings: 'color>DARK GRAY : item>LEATHER_LEGGINGS : named>&aCalça'
       boots: 'color>BLACK : item>LEATHER_BOOTS : named>&aBotas'
+  disco:
+    name: 'Discoteca'
+    armor:
+      helmet: 'color>BLUE : item>LEATHER_HELMET : named>&aCapacete'
+      chestplate: 'color>BLUE : item>LEATHER_CHESTPLATE : named>&aColete'
+      leggings: 'color>BLUE : item>LEATHER_LEGGINGS : named>&aCalça'
+      boots: 'color>BLUE : item>LEATHER_BOOTS : named>&aBotas'
