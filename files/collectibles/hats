@@ -7,47 +7,187 @@ hats:
     name: 'Vaca'
     owner-id: '97ddf3b3-9dbe-4a3b-8a0f-1b19ddeac0bd'
     value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19'
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
-  frogs:
-    name: 'Sapo'
-    owner-id: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
-    value: ''
+  chicken:
+    name: 'Galinha'
+    owner-id: '7d3a8ace-e045-4eba-ab71-71dbf525daf1'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ=='
+  dog:
+    name: 'Cachorro'
+    owner-id: '9d50745e-1dce-4b0c-80a7-4450610f4669'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdiNGY4NGUxOWI1MmYzMTIxNzcxMmU3YmE5ZjUxZDU2ZGE1OWQyNDQ1YjRkN2YzOWVmNmMzMjNiODE2NiJ9fX0='
+  zebra:
+    name: 'Zebra'
+    owner-id: 'f931eea7-ed8d-4406-9934-e0397d80ad40'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc0YmNlOTc4MWUzODUxOTdjZjM5YTk2MTkzZTljMjQzZGZiMTRmZWVmNzIyYzg3YmVhY2Q2Yjk5MzI5YjE1NSJ9fX0='
+  turtle:
+    name: 'Tartaruga'
+    owner-id: '245f22b4-2c7c-4a9c-86fa-9ec64c54e4fa'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGE0MDUwZTdhYWNjNDUzOTIwMjY1OGZkYzMzOWRkMTgyZDdlMzIyZjlmYmNjNGQ1Zjk5YjU3MThhIn19fQ=='
+  horse:
+    name: 'Cavalo'
+    owner-id: '022202fd-9546-4492-b8b6-b768e95701c2'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JiNGIyODg5OTFlZmI4Y2EwNzQzYmVjY2VmMzEyNThiMzFkMzlmMjQ5NTFlZmIxYzljMThhNDE3YmE0OGY5In19fQ=='
+  donkey:
+    name: 'Burro'
+    owner-id: '1941ab60-6946-4683-b4c0-2ad833ee0005'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjE0NGJkYWQ2YmMxOGEzNzE2YjE5NmRjNGE0YmQ2OTUyNjVlY2NhYWRkMGQ5NDViZWI5NzY0NDNmODI2OTNiIn19fQ=='
+  reindeer:
+    name: 'Rena'
+    owner-id: '5ddb61e0-4e65-4097-8026-489261d7d278'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDQ5MjdjZTViYTIyYWQxZTc1N2Q2YTMzM2UyNzViMzZkYTFhODQzNmZjZWYwNzczNDBhYjUzZTNmYiJ9fX0='
+  sheep:
+    name: 'Ovelha'
+    owner-id: 'fa234925-9dbe-4b8f-a544-7c70fb6b6ac5'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19'
+  rabbit:
+    name: 'Coelho'
+    owner-id: '69c0df0d-3fb6-4ad1-8a40-eaa950470aa4'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThhNGZiMjVhZmJjNmI3YWVjMTVhYmU4NzJmY2VhZDFlNWIzM2MxYWIxMjUyNTE0MWQ3N2JmZDI5OGZjMzJkOSJ9fX0='
+  pig:
+    name: 'Porco'
+    owner-id: 'e1e1c2e4-1ed2-473d-bde2-3ec718535399'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+  bee:
+    name: 'Abelha'
+    owner-id: '658b47f7-fdfd-4a77-bb35-77c0f9ed2ba8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTg3NDc4N2UzNjE1OWU0ZDc0ZGI1ZTI1YmFiYTk4N2I2NjVkY2M4OTBiZTlmMjYyYmIwY2JjZjVkMDFiODJiNiJ9fX0='
+  snowman:
+    name: 'Boneco de Neve'
+    owner-id: 'a6890ee5-b122-4208-9c80-8dc52b6fff9a'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTI3Njk1YmVlMmJhYmY5YmFlZjExYWUxOWZlNWY4MTdmYTA4OGNkNTJjNGM0NzNjYzdiNDQxZDVjM2Y1MGZlIn19fQ=='
+  spider:
+    name: 'Aranha'
+    owner-id: '8bdb71d0-4724-48b2-9344-e79480424798'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q1NDE1NDFkYWFmZjUwODk2Y2QyNThiZGJkZDRjZjgwYzNiYTgxNjczNTcyNjA3OGJmZTM5MzkyN2U1N2YxIn19fQ=='
+  creeper:
+    name: 'Creeper'
+    owner-id: 'eed2d903-ca32-4cc7-b33b-ca3bdbe18da4'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQyNTQ4MzhjMzNlYTIyN2ZmY2EyMjNkZGRhYWJmZTBiMDIxNWY3MGRhNjQ5ZTk0NDQ3N2Y0NDM3MGNhNjk1MiJ9fX0='
+  zombie:
+    name: 'Zumbi'
+    owner-id: '9959dd98-efb3-4ee9-a8fb-2fda0218cda0'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTZmYzg1NGJiODRjZjRiNzY5NzI5Nzk3M2UwMmI3OWJjMTA2OTg0NjBiNTFhNjM5YzYwZTVlNDE3NzM0ZTExIn19fQ=='
+  skeleton:
+    name: 'Esqueleto'
+    owner-id: '4e02d3bb-f0d1-4730-b282-c3d5d99192d8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGE0ZTJhZjY1MDA1MzhkZmVhMzc5YmVhMTE0NzFlNjJjM2RkNDY2NjE3YWYxYzVmMmJkYTM0NzI3NWE4NjkifX19'
+  slime:
+    name: 'Slime'
+    owner-id: '8321287f-584b-4e81-82c1-692bcd63ccc8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIwZTg0ZDMyZDFlOWM5MTlkM2ZkYmI1M2YyYjM3YmEyNzRjMTIxYzU3YjI4MTBlNWE0NzJmNDBkYWNmMDA0ZiJ9fX0='
+  blaze:
+    name: 'Blaze'
+    owner-id: '7ceb88b2-7f5f-4399-abb9-7068251baa9d'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc4ZWYyZTRjZjJjNDFhMmQxNGJmZGU5Y2FmZjEwMjE5ZjViMWJmNWIzNWE0OWViNTFjNjQ2Nzg4MmNiNWYwIn19fQ=='
+  ghast:
+    name: 'Ghast'
+    owner-id: '807f287f-6499-4e93-a887-0a298ab3091f'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI2YTcyMTM4ZDY5ZmJiZDJmZWEzZmEyNTFjYWJkODcxNTJlNGYxYzk3ZTVmOTg2YmY2ODU1NzFkYjNjYzAifX19'
+  guardian:
+    name: 'Guardião'
+    owner-id: '628f15d0-e39c-4fd9-9c4e-8c41d4f54b29'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBiZjM0YTcxZTc3MTViNmJhNTJkNWRkMWJhZTVjYjg1Zjc3M2RjOWIwZDQ1N2I0YmZjNWY5ZGQzY2M3Yzk0In19fQ=='
+  drowned:
+    name: 'Afogado'
+    owner-id: '8c2ddebb-2b2e-4a0d-a4e4-601e58fcf2a6'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg0ZGY3OWM0OTEwNGIxOThjZGFkNmQ5OWZkMGQwYmNmMTUzMWM5MmQ0YWI2MjY5ZTQwYjdkM2NiYmI4ZTk4YyJ9fX0=='
+  magma-cube:
+    name: 'Cubo de Magma'
+    owner-id: '96aced64-5b85-4b99-b825-53cd7a9f9726'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzg5NTdkNTAyM2M5MzdjNGM0MWFhMjQxMmQ0MzQxMGJkYTIzY2Y3OWE5ZjZhYjM2Yjc2ZmVmMmQ3YzQyOSJ9fX0='
+  iron-golem:
+    name: 'Golém de Ferro'
+    owner-id: '7cb6e9a5-994f-40d5-9bfc-4ba5d796d21e'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwOTFkNzllYTBmNTllZjdlZjk0ZDdiYmE2ZTVmMTdmMmY3ZDQ1NzJjNDRmOTBmNzZjNDgxOWE3MTQifX19'
+  villager:
+    name: 'Aldeão'
+    owner-id: '0a9e8efb-9191-4c81-80f5-e27ca5433156'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODIyZDhlNzUxYzhmMmZkNGM4OTQyYzQ0YmRiMmY1Y2E0ZDhhZThlNTc1ZWQzZWIzNGMxOGE4NmU5M2IifX19'
+  enderman:
+    name: 'Enderman'
+    owner-id: '6e4d2ed0-05e8-4959-b06c-e649d9113349'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTZjMGIzNmQ1M2ZmZjY5YTQ5YzdkNmYzOTMyZjJiMGZlOTQ4ZTAzMjIyNmQ1ZTgwNDVlYzU4NDA4YTM2ZTk1MSJ9fX0='
+  zombie-pigman:
+    name: 'Homem Porco Zumbi'
+    owner-id: 'b9d5b95a-237c-461e-a316-e1ede14ab301'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTVmYjJkZjc1NGM5OGI3NDJkMzVlN2I4MWExZWVhYzlkMzdjNjlmYzhjZmVjZDNlOTFjNjc5ODM1MTZmIn19fQ=='
+  witch:
+    name: 'Bruxa'
+    owner-id: '7f92b3d6-5ee0-4ab6-afae-2206b9514a63'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjBlMTNkMTg0NzRmYzk0ZWQ1NWFlYjcwNjk1NjZlNDY4N2Q3NzNkYWMxNmY0YzNmODcyMmZjOTViZjlmMmRmYSJ9fX0'
+  cave-spider:
+    name: 'Aranha da Caverna'
+    owner-id: '39173a7a-c957-4ec1-ac1a-43e5a64983df'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE2NDVkZmQ3N2QwOTkyMzEwN2IzNDk2ZTk0ZWViNWMzMDMyOWY5N2VmYzk2ZWQ3NmUyMjZlOTgyMjQifX19'
+  squid:
+    name: 'Lula'
+    owner-id: '5d004370-d3be-416a-81d0-642e5ac80df8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDljMmM5Y2U2N2ViNTk3MWNjNTk1ODQ2M2U2YzlhYmFiOGU1OTlhZGMyOTVmNGQ0MjQ5OTM2YjAwOTU3NjlkZCJ9fX0='
+  wolf:
+    name: 'Lobo'
+    owner-id: 'fa5d3210-6e39-47ca-adb4-a3b2f0f966d9'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjlkMWQzMTEzZWM0M2FjMjk2MWRkNTlmMjgxNzVmYjQ3MTg4NzNjNmM0NDhkZmNhODcyMjMxN2Q2NyJ9fX0='
+  bat:
+    name: 'Morcego'
+    owner-id: '64e81367-9275-4ba0-9e79-be45f7f75a8d'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzgyMGExMGRiMjIyZjY5YWMyMjE1ZDdkMTBkY2E0N2VlYWZhMjE1NTUzNzY0YTJiODFiYWZkNDc5ZTc5MzNkMSJ9fX0='
+  endermite:
+    name: 'Endermite'
+    owner-id: '3302cdfe-6879-4659-ab0b-587b2cdb98e6'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWExYTA4MzFhYTAzYWZiNDIxMmFkY2JiMjRlNWRmYWE3ZjQ3NmExMTczZmNlMjU5ZWY3NWE4NTg1NSJ9fX0='
+  silverfish:
+    name: 'Traça'
+    owner-id: '30a4cd5c-5754-4db8-8960-18022a74627d'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGE5MWRhYjgzOTFhZjVmZGE1NGFjZDJjMGIxOGZiZDgxOWI4NjVlMWE4ZjFkNjIzODEzZmE3NjFlOTI0NTQwIn19fQ=='
+  alex-witch:
+    name: 'Alex - Bruxa'
+    owner-id: 'a1f8ae07-df91-4a4f-aace-f2ae4ec852b2'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ2M2ZlYTM1ODNmMTI2M2RkZDNlZmRjODI1NjIxZWFmODRjODczZTczYTIyOWZmMjU4OTUyOGI0NWQxODQifX19'
+  alex-natal:
+    name: 'Alex - Natalino'
+    owner-id: '5e407a8e-f603-45d8-ac72-3562da3e3ef1'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmM2ZTZiMWU3M2NiODJmZGUwYWY1N2E3NzU5NjJkN2I1YmJmYTU5ZTg4ZWI2ZDJlYzgzOWVjYzRmOThkZjFkZSJ9fX0='
+  alex-baker:
+    name: 'Alex - Padeiro'
+    owner-id: '6f3f82f8-09f2-4932-9d43-6e9d784f1028'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjg2NzAyMGE5OTA1MjNlZDkzOWJlODIyMDBlYzk2OTc2MDhlMTBiNzZkODljYWY0MjIwNzAyOTA2ZmI1ZDQzNSJ9fX0='
+  alex-teacher:
+    name: 'Alex - Professor'
+    owner-id: '6a9e02fd-84e2-43bc-83b0-b17deaf04f30'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWU1NTkwZWE2MTQzZTNiMjhmZmI0YmI3MWFhZWNmZDBhMjYzNjhmMTFmMGZlNDdkNjI1ZTYwZWUwZTBkY2JkZCJ9fX0='
+  alex:
+    name: 'Alex'
+    owner-id: 'd46798ef-edd2-4b75-95fc-c1760972a079'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjNiMDk4OTY3MzQwZGFhYzUyOTI5M2MyNGUwNDkxMDUwOWIyMDhlN2I5NDU2M2MzZWYzMWRlYzdiMzc1MCJ9fX0='
+  soccerball:
+    name: 'Bola de Futebol'
+    owner-id: '0b2ff471-6774-4f6f-94c1-7986ba301563'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTlmNTEyZWQ2YTJhYzdjZDU1MDdkZDkzNmI2YWMyZTcwOGM0MDEwOWU3MjhmOWEyM2I1MDE1ZmM2NzkxNSJ9fX0='
+  basketball:
+    name: 'Basquete'
+    owner-id: 'fdd40f97-3f5b-457e-9c96-c8d1e9b4ce01'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2NlYmZmOTBiNWM5YzU5Y2EzNTQyZmQyNTUxZWUzOTk5ZjhlOGJmZmVmMTA4NWJjYzg3YmYyZGNkNjE3ZmU0MSJ9fX0='
+  beach-ball:
+    name: 'Bola de Praia'
+    owner-id: 'a26ea47e-279a-4e92-acf5-f11c6f3f6201'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE1YWIwNWVhMjU0YzMyZTNjNDhmM2ZkY2Y5ZmQ5ZDc3ZDNjYmEwNGU2YjVlYzJlNjhiM2NiZGNmYWMzZmQifX19'
+  dragon-ball:
+    name: 'Esfera do Dragão'
+    owner-id: '6521bbc1-7622-4653-9870-9a91498ab205'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWMxYTdlMTkzZjM3YzJjNTRlMzU4ZjIyYThhMmQwMjg5NzkzZGQzYjJkNmM3OTllODQyNGI5MjZhMzk1MSJ9fX0='
+  pokeball:
+    name: 'Pokebola'
+    owner-id: '04be8421-c832-4cf8-82e5-9b88d814717e'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQzZDRiN2FjMjRhMWQ2NTBkZGY3M2JkMTQwZjQ5ZmMxMmQyNzM2ZmMxNGE4ZGMyNWMwZjNmMjlkODVmOGYifX19'
+  goku:
+    name: 'Goku'
+    owner-id: '023d9769-ea13-484a-98a1-fa08515f0e05'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWU2Yzk1ODM5MGFkN2Y3OTVlNjYwNmEyYTc0M2UyYWZlYzNmM2ZiZDkzYTJiMGM3MjA0ZWQ2OThmZDlhIn19fQ=='
+  luigi:
+    name: 'Luigi'
+    owner-id: 'a40ff874-c87b-4620-8fd3-35748e4949f0'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGUzZmJlNDlmYzdlZWVmMjc5OTI5YzlhMzYyMzNlZGIzMThhMDk3YzdmMDc2YmE0Nzg1NzUxMDQ0OTNlYThmNSJ9fX0='
+  mario:
+    name: 'Mario'
+    owner-id: '1bdd35b9-adbe-44d5-95b6-726002dd747d'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWY1MGZjNDBjYmZmZWFhYThkY2MxMjc0YzE4NjcxYjU1MmU3MzY0OGY2YjIzMzZlMTMwNTc2MDYxNDFkNDdmIn19fQ=='
