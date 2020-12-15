@@ -10,20 +10,18 @@ messages:
       banners: 'Nenhum'
       clothes: 'Nenhuma'
       hats: 'Nenhum'
-      pets: 'Nenhum'
   equip:
     banners: '&6[Colecionáveis] &aVocê equipou o banner &f{banner}&a.'
     clothes: '&6[Colecionáveis] &aVocê equipou a roupa &f{clothe}&a.'
     hats: '&6[Colecionáveis] &aVocê equipou o chapéu &f{hat}&a.'
-    pets: '&6[Colecionáveis] &aVocê equipou o pet &f{pet}&a.'
   remove:
     banners: '&6[Colecionáveis] &cVocê removeu seu banner.'
     clothes: '&6[Colecionáveis] &cVocê removeu sua roupa.'
     hats: '&6[Colecionáveis] &cVocê removeu seu chapéus.'
-    pets: '&6[Colecionáveis] &cVocê removeu seu pet.'
   not-have:
-    clothes: '&cVocê não possui esta ROUPA.'
-    pets: '&cVocê não possui este PET.'
+    banners: '&cVocê não possui este banner.'
+    clothes: '&cVocê não possui esta roupa.'
+    hats: '&cVocê não possui este chapéu.'
   cooldown:
     clothes:
       iron-man: '&cVocê deve esperar &e{time} &cpara voar novamente!'
