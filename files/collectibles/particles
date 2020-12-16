@@ -1,0 +1,9 @@
+particles:
+  waterdrip:
+    name: 'Respingos de Água'
+  lavadrip:
+    name: 'Respingos de Lava'
+  note:
+    name: 'Nota Músical'
+  angryvillager:
+    name: 'Aldeão Raivoso'
