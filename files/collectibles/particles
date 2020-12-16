@@ -7,3 +7,5 @@ particles:
     name: 'Nota Músical'
   angryvillager:
     name: 'Aldeão Raivoso'
+  happyvillager:
+    name: 'Aldeão Feliz'
