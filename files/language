@@ -11,21 +11,25 @@ messages:
       banners: 'Nenhum'
       clothes: 'Nenhuma'
       hats: 'Nenhum'
+      particles: 'Nenhuma'
   equip:
     animatedhats: '&6[Colecionáveis] &aVocê equipou o chapéu animado &f{animatedhat}&a.'
     banners: '&6[Colecionáveis] &aVocê equipou o banner &f{banner}&a.'
     clothes: '&6[Colecionáveis] &aVocê equipou a roupa &f{clothe}&a.'
     hats: '&6[Colecionáveis] &aVocê equipou o chapéu &f{hat}&a.'
+    particles: '&6[Colecionáveis] &aVocê equipou o partícula &f{particle}&a.'
   remove:
     animatedhats: '&6[Colecionáveis] &cVocê removeu seu chapéu animado.'
     banners: '&6[Colecionáveis] &cVocê removeu seu banner.'
     clothes: '&6[Colecionáveis] &cVocê removeu sua roupa.'
-    hats: '&6[Colecionáveis] &cVocê removeu seu chapéus.'
+    hats: '&6[Colecionáveis] &cVocê removeu seu chapéu.'
+    particles: '&6[Colecionáveis] &cVocê removeu sua partícula.'
   not-have:
     animatedhats: '&cVocê não possui este chapéu animado.'
     banners: '&cVocê não possui este banner.'
     clothes: '&cVocê não possui esta roupa.'
     hats: '&cVocê não possui este chapéu.'
+    particles: '&cVocê não possui esta partícula.'
   cooldown:
     clothes:
       iron-man: '&cVocê deve esperar &e{time} &cpara voar novamente!'
