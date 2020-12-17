@@ -9,3 +9,5 @@ particles:
     name: 'Aldeão Raivoso'
   happyvillager:
     name: 'Aldeão Feliz'
+  portal:
+    name: 'Portal'
