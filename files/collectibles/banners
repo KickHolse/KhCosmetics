@@ -89,24 +89,3 @@ banners:
   lether-b:
     name: 'Letra B'
     flag: '{HideFlags: 32,BlockEntityTag:{Base:0,Patterns:[{Pattern:vh,Color:15},{Pattern:rs,Color:15},{Pattern:ts,Color:15},{Pattern:bs,Color:15},{Pattern:ms,Color:15},{Pattern:bo,Color:0}]}}'
-  as:
-    name: 'Letra A'
-    flag: ''
-  as:
-    name: 'Letra A'
-    flag: ''
-  as:
-    name: 'Letra A'
-    flag: ''
-  as:
-    name: 'Letra A'
-    flag: ''
-  as:
-    name: 'Letra A'
-    flag: ''
-  as:
-    name: 'Letra A'
-    flag: ''
-  as:
-    name: 'Letra A'
-    flag: ''
