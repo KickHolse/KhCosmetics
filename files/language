@@ -31,6 +31,3 @@ messages:
     clothes: '&cVocê não possui esta roupa.'
     hats: '&cVocê não possui este chapéu.'
     particles: '&cVocê não possui esta partícula.'
-  cooldown:
-    clothes:
-      iron-man: '&cVocê deve esperar &e{time} &cpara voar novamente!'
