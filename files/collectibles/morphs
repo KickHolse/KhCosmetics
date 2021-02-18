@@ -1,0 +1,65 @@
+menu:
+  title: 'Mutações'
+  rows: 6
+  replaces:
+    select: '&eClique para equipar!'
+    not-have: '&cVocê não possui esta mutação!'
+    already-equipped: '&6Esta mutação já esta equipado!'
+  items:
+    clear:
+      slot: 48
+      execute: 'CLEAR>morphs'
+      icon: 'item>BARRIER : nome>&cRemover mutações : desc>&7'
+    back:
+      slot: 50
+      execute: 'COLLECTIBLES>main'
+      icon: 'item>ROSE_RED : nome>&cVoltar : desc>&7'
+morphs:
+  cow:
+    name: 'Vaca'
+    icon: 'item>HEAD:dono=Cow : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Vaca!\n\n{select}'
+  enderman:
+    name: 'Enderman'
+    icon: 'item>HEAD:dono=ahzm : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Enderman!\n\n{select}'
+  iron_golem:
+    name: 'Iron Golem'
+    icon: 'item>HEAD:dono=BATU_OP101 : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Iron Golem!\n\n{select}'
+  sheep:
+    name: 'Ovelha'
+    icon: 'item>HEAD:dono=babkaStaska : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Ovelha!\n\n{select}'
+  guardian:
+    name: 'Guardião'
+    icon: 'item>HEAD:dono=guardian : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Guardião!\n\n{select}'
+  skeleton:
+    name: 'Esqueleto'
+    icon: 'item>HEAD:dono=skeleton : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Esqueleto!\n\n{select}'
+  witch:
+    name: 'Bruxa'
+    icon: 'item>HEAD:dono=aradasubak : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Bruxa!\n\n{select}'
+  chicken:
+    name: 'Galinha'
+    icon: 'item>HEAD:dono=mhf_chicken : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Galinha!\n\n{select}'
+  blaze:
+    name: 'Blaze'
+    icon: 'item>HEAD:dono=727Z : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Blaze!\n\n{select}'
+  creeper:
+    name: 'Creeper'
+    icon: 'item>HEAD:dono=creeper : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Creeper!\n\n{select}'
+  spider:
+    name: 'Aranha'
+    icon: 'item>HEAD:dono=MHF_Spider : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Aranha!\n\n{select}'
+  zombie:
+    name: 'Zumbi'
+    icon: 'item>HEAD:dono=mhf_zombie : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Zumbi!\n\n{select}'
+  wither_skeleton:
+    name: 'Esqueleto Wither'
+    icon: 'item>HEAD:dono=wither_skeleton : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Esqueleto Wither!\n\n{select}'
+  pig:
+    name: 'Porco'
+    icon: 'item>HEAD:dono=mhf_pig : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Porco!\n\n{select}'
+  slime:
+    name: 'Slime'
+    icon: 'item>HEAD:dono=mhf_slime : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Slime!\n\n{select}'
+  magma_cube:
+    name: 'Cubo de Magma'
+    icon: 'item>HEAD:dono=J1fy : nome>&6{name} : desc>&7Divirta-se em nossos lobbies\n&7disfarçado de Cubo de Magma!\n\n{select}'
