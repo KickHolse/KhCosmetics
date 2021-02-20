@@ -1,0 +1,40 @@
+menu:
+  title: 'Colecionáveis'
+  rows: 5
+  replaces:
+    select: '&eClique para equipar!'
+    not-have: '&cVocê não possui esta roupa!'
+    already-equipped: '&6Esta roupa já esta equipada!'
+  items:
+    clothes:
+      slot: 10
+      execute: 'COLLECTIBLES>clothes'
+      icon: 'item>LEATHER_CHESTPLATE : nome>&aRoupas : desc>&7Use roupas de diversos tipos\n&7para se exibir em nossos lobbies.\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
+    particles:
+      slot: 11
+      execute: 'COLLECTIBLES>particles'
+      icon: 'item>BLAZE_POWDER : nome>&aPartículas : desc>&7Escolha partículas de diversas\n&7cores e formatos para usar\n&7nos lobbies.\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
+    gadgets:
+      slot: 15
+      execute: 'NONE'
+      icon: 'item>379 : nome>&aEngenhocas : desc>&7Escolha uma engenhoca para\n&7se divertir em nossos lobbies!\n\n&7 Desbloqueados: &f-/- &8(-%)\n&7 Selecionado: &f-\n\n&eClique para abrir!'
+    morphs:
+      slot: 16
+      execute: 'COLLECTIBLES>morphs'
+      icon: 'item>HEAD:dono=mhf_zombie : nome>&aMutações : desc>&7Você pode se transformar em um mob\n&7especial enquanto anda pelos lobbies.\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
+    pets:
+      slot: 28
+      execute: 'NONE'
+      icon: 'item>BONE : nome>&aPets : desc>&7Passeie pelos nossos lobbies\n&7acompanhado por um Pet!\n\n&7 Desbloqueados: &f-/- &8(-%)\n&7 Selecionado: &f-\n\n&eClique para abrir!'
+    banners:
+      slot: 29
+      execute: 'COLLECTIBLES>banners'
+      icon: 'item>BANNER:flag={HideFlags: 32,BlockEntityTag:{Base:12,Patterns:[{Pattern:sc,Color:3},{Pattern:ms,Color:10},{Pattern:hhb,Color:3},{Pattern:bs,Color:7},{Pattern:ts,Color:2},{Pattern:bo,Color:12}]}} : nome>&aBanners : desc>&7Escolha banners com diversos\n&7desenhos diferentes para usar\n&7nos lobbies!\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
+    animatedhats:
+      slot: 33
+      execute: 'COLLECTIBLES>animatedhats'
+      icon: 'item>HEAD:dono=mhf_zombie : nome>&aChapéus Animados : desc>&7Escolha um chapéu animado para\n&7exibir as mais diversas reações.\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
+    hats:
+      slot: 34
+      execute: 'COLLECTIBLES>hats'
+      icon: 'item>HEAD:dono=guardian : nome>&aChapéus : desc>&7Escolha um chapéu para andar\n&7com estilo em nossos lobbies.\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
