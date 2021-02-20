@@ -1,10 +1,6 @@
 menu:
   title: 'Colecionáveis'
   rows: 5
-  replaces:
-    select: '&eClique para equipar!'
-    not-have: '&cVocê não possui esta roupa!'
-    already-equipped: '&6Esta roupa já esta equipada!'
   items:
     clothes:
       slot: 10
