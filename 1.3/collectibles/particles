@@ -1,0 +1,50 @@
+menu:
+  title: 'Partículas'
+  rows: 6
+  replaces:
+    select: '&eClique para equipar!'
+    not-have: '&cVocê não possui esta partícula!'
+    already-equipped: '&6Esta partícula já esta equipada!'
+  items:
+    clear:
+      slot: 48
+      execute: 'CLEAR>particles'
+      icon: 'item>BARRIER : nome>&cRemover partículas : desc>&7'
+    back:
+      slot: 50
+      execute: 'COLLECTIBLES>main'
+      icon: 'item>ROSE_RED : nome>&cVoltar : desc>&7'
+particles:
+  waterdrip:
+    name: 'Respingos de Água'
+    icon: 'item>WATER_BUCKET : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  lavadrip:
+    name: 'Respingos de Lava'
+    icon: 'item>LAVA_BUCKET : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  note:
+    name: 'Nota Músical'
+    icon: 'item>NOTE_BLOCK : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  portal:
+    name: 'Portal do Nether'
+    icon: 'item>OBSIDIAN : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  angryvillager:
+    name: 'Aldeão Zangado'
+    icon: 'item>BLAZE_ROD : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  happyvillager:
+    name: 'Aldeão Feliz'
+    icon: 'item>EMERALD : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  heart:
+    name: 'Corações'
+    icon: 'item>RED_FLOWER : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  smoke:
+    name: 'Fumaça'
+    icon: 'item>351:15 : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  flame:
+    name: 'Chamas'
+    icon: 'item>BLAZE_POWDER : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
+  fireworkspark:
+    name: 'Faísca de Fogos de Artifícil'
+    icon: 'item>401 : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de\n&7{name}.\n\n{select}'
+  witchspell:
+    name: 'Feitiço de Bruxa'
+    icon: 'item>372 : nome>&6{name} : desc>&7Brilhe com estilo em nossos lobbies\n&7com a partícula de {name}.\n\n{select}'
