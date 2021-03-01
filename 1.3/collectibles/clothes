@@ -1,0 +1,193 @@
+menu:
+  title: 'Roupas'
+  rows: 6
+  replaces:
+    select: '&eClique para equipar!'
+    not-have: '&cVocê não possui esta roupa!'
+    already-equipped: '&6Esta roupa já esta equipada!'
+  items:
+    clear:
+      slot: 48
+      execute: 'CLEAR>clothes'
+      icon: 'item>BARRIER : nome>&cRemover roupas : desc>&7'
+    back:
+      slot: 50
+      execute: 'COLLECTIBLES>main'
+      icon: 'item>ROSE_RED : nome>&cVoltar : desc>&7'
+clothes:
+  astronaut:
+    name: 'Astronauta'
+    icon: 'item>20 : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>20 : nome>&aCapacete'
+      chestplate: 'color>WHITE : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>GRAY : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>WHITE : item>LEATHER_BOOTS : nome>&aBotas'
+  leather:
+    name: 'Couro'
+    icon: 'item>LEATHER_HELMET : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>LEATHER_HELMET : nome>&aCapacete'
+      chestplate: 'item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'item>LEATHER_BOOTS : nome>&aBotas'
+  chainmail:
+    name: 'Malha'
+    icon: 'item>CHAINMAIL_HELMET : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>CHAINMAIL_HELMET : nome>&aCapacete'
+      chestplate: 'item>CHAINMAIL_CHESTPLATE : nome>&aColete'
+      leggings: 'item>CHAINMAIL_LEGGINGS : nome>&aCalça'
+      boots: 'item>CHAINMAIL_BOOTS : nome>&aBotas'
+  iron:
+    name: 'Ferro'
+    icon: 'item>IRON_HELMET : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>IRON_HELMET : nome>&aCapacete'
+      chestplate: 'item>IRON_CHESTPLATE : nome>&aColete'
+      leggings: 'item>IRON_LEGGINGS : nome>&aCalça'
+      boots: 'item>IRON_BOOTS : nome>&aBotas'
+  golden:
+    name: 'Ouro'
+    icon: 'item>GOLDEN_HELMET : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>GOLDEN_HELMET : nome>&aCapacete'
+      chestplate: 'item>GOLDEN_CHESTPLATE : nome>&aColete'
+      leggings: 'item>GOLDEN_LEGGINGS : nome>&aCalça'
+      boots: 'item>GOLDEN_BOOTS : nome>&aBotas'
+  diamond:
+    name: 'Diamante'
+    icon: 'item>DIAMOND_HELMET : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>DIAMOND_HELMET : nome>&aCapacete'
+      chestplate: 'item>DIAMOND_CHESTPLATE : nome>&aColete'
+      leggings: 'item>DIAMOND_LEGGINGS : nome>&aCalça'
+      boots: 'item>DIAMOND_BOOTS : nome>&aBotas'
+  disco:
+    name: '&cL&eG&2B&9T&5+'
+    icon: 'item>HEAD:dono=Huyre : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}&7.\n\n{select}'
+    armor:
+      helmet: 'item>LEATHER_HELMET : nome>&aCapacete'
+      chestplate: 'item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'item>LEATHER_BOOTS : nome>&aBotas'
+  luigi:
+    name: 'Luigi'
+    icon: 'item>HEAD:dono=alp_h : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=alp_h : nome>&aCapacete'
+      chestplate: 'color>GREEN : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>GREEN : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>GREEN : item>LEATHER_BOOTS : nome>&aBotas'
+  mario:
+    name: 'Mario'
+    icon: 'item>HEAD:dono=f9536f52f2b9d8f9 : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=f9536f52f2b9d8f9 : nome>&aCapacete'
+      chestplate: 'color>RED : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>RED : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>RED : item>LEATHER_BOOTS : nome>&aBotas'
+  yoshi:
+    name: 'Yoshi'
+    icon: 'item>HEAD:dono=x_Yoshi_x : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=x_Yoshi_x : nome>&aCapacete'
+      chestplate: 'color>WHITE : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>LIGHT GREEN : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>ORANGE : item>LEATHER_BOOTS : nome>&aBotas'
+  daffy:
+    name: 'Patolino'
+    icon: 'item>HEAD:dono=Daffy : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=Daffy : nome>&aCapacete'
+      chestplate: 'color>BLACK : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BLACK : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>ORANGE : item>LEATHER_BOOTS : nome>&aBotas'
+  spiderman:
+    name: 'Homem Aranha'
+    icon: 'item>HEAD:dono=dire_straits : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=dire_straits : nome>&aCapacete'
+      chestplate: 'color>RED : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BLUE : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>RED : item>LEATHER_BOOTS : nome>&aBotas'
+  venom:
+    name: 'Venom'
+    icon: 'item>HEAD:dono=1147512 : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=1147512 : nome>&aCapacete'
+      chestplate: 'color>BLACK : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BLACK : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>BLACK : item>LEATHER_BOOTS : nome>&aBotas'
+  flash:
+    name: 'Flash'
+    icon: 'item>HEAD:dono=2n0 : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=2n0 : nome>&aCapacete'
+      chestplate: 'color>RED : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>RED : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>RED : item>LEATHER_BOOTS : nome>&aBotas'
+  ironman:
+    name: 'Homem de Ferro'
+    icon: 'item>HEAD:dono=69Kikinho69 : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=69Kikinho69 : nome>&aCapacete'
+      chestplate: 'color>RED : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>YELLOW : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>RED : item>LEATHER_BOOTS : nome>&aBotas'
+  thor:
+    name: 'Thor'
+    icon: 'item>HEAD:dono=Thor : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=Thor : nome>&aCapacete'
+      chestplate: 'color>BLACK : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>DARK GRAY : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>BLACK : item>LEATHER_BOOTS : nome>&aBotas'
+  herobrine:
+    name: 'Herobrine'
+    icon: 'item>HEAD:dono=her0brine : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=her0brine : nome>&aCapacete'
+      chestplate: 'color>CYAN : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BLUE : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>GRAY : item>LEATHER_BOOTS : nome>&aBotas'
+  ender_dragon:
+    name: 'Ender Dragon'
+    icon: 'item>HEAD:dono=hwsky : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=hwsky : nome>&aCapacete'
+      chestplate: 'color>PURPLE : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BLACK : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>BLACK : item>LEATHER_BOOTS : nome>&aBotas'
+  enderman:
+    name: 'Enderman'
+    icon: 'item>HEAD:dono=ahzm : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa do {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=ahzm : nome>&aCapacete'
+      chestplate: 'color>BLACK : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BLACK : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>BLACK : item>LEATHER_BOOTS : nome>&aBotas'
+  monkey:
+    name: 'Macaco'
+    icon: 'item>HEAD:dono=Bomko : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=Bomko : nome>&aCapacete'
+      chestplate: 'color>BROWN : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>BROWN : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>BROWN : item>LEATHER_BOOTS : nome>&aBotas'
+  pig:
+    name: 'Porco'
+    icon: 'item>HEAD:dono=Zwijn : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=Zwijn : nome>&aCapacete'
+      chestplate: 'color>PINK : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>PINK : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>PINK : item>LEATHER_BOOTS : nome>&aBotas'
+  frog:
+    name: 'Sapo'
+    icon: 'item>HEAD:dono=JipMasterBot : nome>&6{name} : desc>&7Caminhe com estilo em nossos\n&7lobbies com a roupa de {name}.\n\n{select}'
+    armor:
+      helmet: 'item>HEAD:dono=JipMasterBot : nome>&aCapacete'
+      chestplate: 'color>GREEN : item>LEATHER_CHESTPLATE : nome>&aColete'
+      leggings: 'color>GREEN : item>LEATHER_LEGGINGS : nome>&aCalça'
+      boots: 'color>GREEN : item>LEATHER_BOOTS : nome>&aBotas'
