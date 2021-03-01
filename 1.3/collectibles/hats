@@ -1,0 +1,152 @@
+menu:
+  title: 'Chapéus'
+  rows: 6
+  replaces:
+    select: '&eClique para equipar!'
+    not-have: '&cVocê não possui este chapéu!'
+    already-equipped: '&6Este chapéu já esta equipado!'
+  items:
+    clear:
+      slot: 48
+      execute: 'CLEAR>hats'
+      icon: 'item>BARRIER : nome>&cRemover Chapéus : desc>&7'
+    back:
+      slot: 50
+      execute: 'COLLECTIBLES>main'
+      icon: 'item>ROSE_RED : nome>&cVoltar : desc>&7'
+hats:
+  frog:
+    name: 'Sapo'
+    ownerid: '6e0e69d8-ac58-40a1-baf8-68de9d85cff8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDJjM2I5OGFkYTE5OTU3ZjhkODNhN2Q0MmZhZjgxYTI5MGZhZTdkMDhkYmY2YzFmODk5MmExYWRhNDRiMzEifX19'
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  cow:
+    name: 'Vaca'
+    ownerid: '97ddf3b3-9dbe-4a3b-8a0f-1b19ddeac0bd'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19'
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  chicken:
+    name: 'Galinha'
+    ownerid: '7d3a8ace-e045-4eba-ab71-71dbf525daf1'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  dog:
+    name: 'Cachorro'
+    ownerid: '9d50745e-1dce-4b0c-80a7-4450610f4669'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdiNGY4NGUxOWI1MmYzMTIxNzcxMmU3YmE5ZjUxZDU2ZGE1OWQyNDQ1YjRkN2YzOWVmNmMzMjNiODE2NiJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  zebra:
+    name: 'Zebra'
+    ownerid: 'f931eea7-ed8d-4406-9934-e0397d80ad40'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc0YmNlOTc4MWUzODUxOTdjZjM5YTk2MTkzZTljMjQzZGZiMTRmZWVmNzIyYzg3YmVhY2Q2Yjk5MzI5YjE1NSJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  turtle:
+    name: 'Tartaruga'
+    ownerid: '245f22b4-2c7c-4a9c-86fa-9ec64c54e4fa'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGE0MDUwZTdhYWNjNDUzOTIwMjY1OGZkYzMzOWRkMTgyZDdlMzIyZjlmYmNjNGQ1Zjk5YjU3MThhIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  horse:
+    name: 'Cavalo'
+    ownerid: '022202fd-9546-4492-b8b6-b768e95701c2'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JiNGIyODg5OTFlZmI4Y2EwNzQzYmVjY2VmMzEyNThiMzFkMzlmMjQ5NTFlZmIxYzljMThhNDE3YmE0OGY5In19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  donkey:
+    name: 'Burro'
+    ownerid: '1941ab60-6946-4683-b4c0-2ad833ee0005'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjE0NGJkYWQ2YmMxOGEzNzE2YjE5NmRjNGE0YmQ2OTUyNjVlY2NhYWRkMGQ5NDViZWI5NzY0NDNmODI2OTNiIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  reindeer:
+    name: 'Rena'
+    ownerid: '5ddb61e0-4e65-4097-8026-489261d7d278'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDQ5MjdjZTViYTIyYWQxZTc1N2Q2YTMzM2UyNzViMzZkYTFhODQzNmZjZWYwNzczNDBhYjUzZTNmYiJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  sheep:
+    name: 'Ovelha'
+    ownerid: 'fa234925-9dbe-4b8f-a544-7c70fb6b6ac5'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19'
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  rabbit:
+    name: 'Coelho'
+    ownerid: '69c0df0d-3fb6-4ad1-8a40-eaa950470aa4'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThhNGZiMjVhZmJjNmI3YWVjMTVhYmU4NzJmY2VhZDFlNWIzM2MxYWIxMjUyNTE0MWQ3N2JmZDI5OGZjMzJkOSJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  pig:
+    name: 'Porco'
+    ownerid: 'e1e1c2e4-1ed2-473d-bde2-3ec718535399'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  bee:
+    name: 'Abelha'
+    ownerid: '658b47f7-fdfd-4a77-bb35-77c0f9ed2ba8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTg3NDc4N2UzNjE1OWU0ZDc0ZGI1ZTI1YmFiYTk4N2I2NjVkY2M4OTBiZTlmMjYyYmIwY2JjZjVkMDFiODJiNiJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  snowman:
+    name: 'Boneco de Neve'
+    ownerid: 'a6890ee5-b122-4208-9c80-8dc52b6fff9a'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTI3Njk1YmVlMmJhYmY5YmFlZjExYWUxOWZlNWY4MTdmYTA4OGNkNTJjNGM0NzNjYzdiNDQxZDVjM2Y1MGZlIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  spider:
+    name: 'Aranha'
+    ownerid: '8bdb71d0-4724-48b2-9344-e79480424798'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q1NDE1NDFkYWFmZjUwODk2Y2QyNThiZGJkZDRjZjgwYzNiYTgxNjczNTcyNjA3OGJmZTM5MzkyN2U1N2YxIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  creeper:
+    name: 'Creeper'
+    ownerid: 'eed2d903-ca32-4cc7-b33b-ca3bdbe18da4'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQyNTQ4MzhjMzNlYTIyN2ZmY2EyMjNkZGRhYWJmZTBiMDIxNWY3MGRhNjQ5ZTk0NDQ3N2Y0NDM3MGNhNjk1MiJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  zombie:
+    name: 'Zumbi'
+    ownerid: '9959dd98-efb3-4ee9-a8fb-2fda0218cda0'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTZmYzg1NGJiODRjZjRiNzY5NzI5Nzk3M2UwMmI3OWJjMTA2OTg0NjBiNTFhNjM5YzYwZTVlNDE3NzM0ZTExIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  skeleton:
+    name: 'Esqueleto'
+    ownerid: '4e02d3bb-f0d1-4730-b282-c3d5d99192d8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGE0ZTJhZjY1MDA1MzhkZmVhMzc5YmVhMTE0NzFlNjJjM2RkNDY2NjE3YWYxYzVmMmJkYTM0NzI3NWE4NjkifX19'
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  slime:
+    name: 'Slime'
+    ownerid: '8321287f-584b-4e81-82c1-692bcd63ccc8'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTIwZTg0ZDMyZDFlOWM5MTlkM2ZkYmI1M2YyYjM3YmEyNzRjMTIxYzU3YjI4MTBlNWE0NzJmNDBkYWNmMDA0ZiJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  blaze:
+    name: 'Blaze'
+    ownerid: '7ceb88b2-7f5f-4399-abb9-7068251baa9d'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjc4ZWYyZTRjZjJjNDFhMmQxNGJmZGU5Y2FmZjEwMjE5ZjViMWJmNWIzNWE0OWViNTFjNjQ2Nzg4MmNiNWYwIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  ghast:
+    name: 'Ghast'
+    ownerid: '807f287f-6499-4e93-a887-0a298ab3091f'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI2YTcyMTM4ZDY5ZmJiZDJmZWEzZmEyNTFjYWJkODcxNTJlNGYxYzk3ZTVmOTg2YmY2ODU1NzFkYjNjYzAifX19'
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  guardian:
+    name: 'Guardião'
+    ownerid: '628f15d0-e39c-4fd9-9c4e-8c41d4f54b29'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBiZjM0YTcxZTc3MTViNmJhNTJkNWRkMWJhZTVjYjg1Zjc3M2RjOWIwZDQ1N2I0YmZjNWY5ZGQzY2M3Yzk0In19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  drowned:
+    name: 'Afogado'
+    ownerid: '8c2ddebb-2b2e-4a0d-a4e4-601e58fcf2a6'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg0ZGY3OWM0OTEwNGIxOThjZGFkNmQ5OWZkMGQwYmNmMTUzMWM5MmQ0YWI2MjY5ZTQwYjdkM2NiYmI4ZTk4YyJ9fX0=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  magma-cube:
+    name: 'Cubo de Magma'
+    ownerid: '96aced64-5b85-4b99-b825-53cd7a9f9726'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzg5NTdkNTAyM2M5MzdjNGM0MWFhMjQxMmQ0MzQxMGJkYTIzY2Y3OWE5ZjZhYjM2Yjc2ZmVmMmQ3YzQyOSJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  enderman:
+    name: 'Enderman'
+    ownerid: '6e4d2ed0-05e8-4959-b06c-e649d9113349'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTZjMGIzNmQ1M2ZmZjY5YTQ5YzdkNmYzOTMyZjJiMGZlOTQ4ZTAzMjIyNmQ1ZTgwNDVlYzU4NDA4YTM2ZTk1MSJ9fX0='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  zombie-pigman:
+    name: 'Homem Porco Zumbi'
+    ownerid: 'b9d5b95a-237c-461e-a316-e1ede14ab301'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTVmYjJkZjc1NGM5OGI3NDJkMzVlN2I4MWExZWVhYzlkMzdjNjlmYzhjZmVjZDNlOTFjNjc5ODM1MTZmIn19fQ=='
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
+  iron-golem:
+    name: 'Golém de Ferro'
+    ownerid: '7cb6e9a5-994f-40d5-9bfc-4ba5d796d21e'
+    value: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODkwOTFkNzllYTBmNTllZjdlZjk0ZDdiYmE2ZTVmMTdmMmY3ZDQ1NzJjNDRmOTBmNzZjNDgxOWE3MTQifX19'
+    icon: 'item>HEAD:nbt={value} : nome>&6{name} : desc>&7Divirta-se pelos nossos lobbies com\n&7estilo utilizando o chapéu {name}.\n\n{select}'
