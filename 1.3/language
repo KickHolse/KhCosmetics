@@ -1,0 +1,32 @@
+# Skript feito por Kick Holse
+# Discord: https://www.kskripts.tk/discord
+
+lobby:
+  hotbar:
+    collectibles:
+      slot: 4
+      execute: 'COLLECTIBLES>main'
+      icon: 'item>PUFFERFISH : nome>&aColecionáveis &7(Clique direito) : desc>&7Se divirta com nossos cosméticos!'
+messages:
+  selected:
+    none:
+      animatedhats: 'Nenhum'
+      banners: 'Nenhum'
+      clothes: 'Nenhuma'
+      hats: 'Nenhum'
+      morphs: 'Nenhuma'
+      particles: 'Nenhuma'
+  equip:
+    animatedhats: '&aVocê selecionou o chapéu animado &6{animatedhat}&a.'
+    banners: '&aVocê selecionou o banner &6{banner}&a.'
+    clothes: '&aVocê selecionou a roupa &6{clothe}&a.'
+    hats: '&aVocê selecionou o chapéu &6{hat}&a.'
+    morphs: '&aVocê selecionou a mutação &6{morph}&a.'
+    particles: '&aVocê selecionou a partícula &6{particle}&a.'
+  remove:
+    animatedhats: '&cTodas os seus chapéus animados foram retirados.'
+    banners: '&cTodos os seus banners foram retirados.'
+    clothes: '&cTodas as suas roupas foram retiradas.'
+    hats: '&cTodos os seus chapéus foram retirados.'
+    morphs: '&cTodas as suas mutações foram retiradas.'
+    particles: '&cTodas as suas partículas foram retiradas.'
