@@ -17,7 +17,7 @@ menu:
     morphs:
       slot: 16
       execute: 'COLLECTIBLES>morphs'
-      icon: 'item>HEAD:dono=mhf_zombie : nome>&aMutações : desc>&7Você pode se transformar em um mob\n&7especial enquanto anda pelos lobbies.\n\n&7 Desbloqueados: &f{have}/{max} &8({percent}%)\n&7 Selecionado: &f{selected}\n\n&eClique para abrir!'
+      icon: 'item>HEAD:dono=mhf_zombie : nome>&aMutações : desc>&7Você pode se transformar em um mob\n&7especial enquanto anda pelos lobbies.\n\n&7 Desbloqueados: &f-/- &8(-%)\n&7 Selecionado: &f-\n\n&eClique para abrir!'
     pets:
       slot: 28
       execute: 'NONE'
