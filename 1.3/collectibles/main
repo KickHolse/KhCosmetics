@@ -16,7 +16,7 @@ menu:
       icon: 'item>379 : nome>&aEngenhocas : desc>&7Escolha uma engenhoca para\n&7se divertir em nossos lobbies!\n\n&7 Desbloqueados: &f-/- &8(-%)\n&7 Selecionado: &f-\n\n&eClique para abrir!'
     morphs:
       slot: 16
-      execute: 'COLLECTIBLES>morphs'
+      execute: 'NONE'
       icon: 'item>HEAD:dono=mhf_zombie : nome>&aMutações : desc>&7Você pode se transformar em um mob\n&7especial enquanto anda pelos lobbies.\n\n&7 Desbloqueados: &f-/- &8(-%)\n&7 Selecionado: &f-\n\n&eClique para abrir!'
     pets:
       slot: 28
