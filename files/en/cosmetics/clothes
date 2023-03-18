@@ -1,0 +1,108 @@
+menu:
+  title: 'Wardrobe'
+  replaces:
+    name_item: '{item} {piece}'
+    unselect: '&e➟ Click to deselect.'
+    select: '&e➟ Click to select.'
+  items:
+    selected_piece:
+      icon: 'LIGHT_GREEN_DYE : nome>&aSelected piece: : desc>&7➟ {piece}'
+    remove:
+      icon: 'BARRIER : nome>&aRemove this piece'
+    paint:
+      icon: '380 : nome>&aPaint this piece'
+    shiny:
+      icon: '399 : nome>&aActivate or deactivate brightness'
+paint:
+  title: 'Color Armor'
+  icons: '{item} : pintar>{color} : nome>&a{name} : desc>&7Color this garment to\n&7{name}&7 color.\n\n&e➟ Click to paint.'
+  items:
+    current_piece:
+      icon: '{item} : nome>&aCurrent piece'
+  colors:
+    blue:
+      name: 'Blue'
+    cyan:
+      name: 'Cyan'
+    light_blue:
+      name: 'Light Blue'
+    green:
+      name: 'Green'
+    lime:
+      name: 'Lime'
+    yellow:
+      name: 'Yellow'
+    orange:
+      name: 'Orange'
+    red:
+      name: 'Red'
+    pink:
+      name: 'Pink'
+    magenta:
+      name: 'Magenta'
+    purple:
+      name: 'Purple'
+    brown:
+      name: 'Brown'
+    black:
+      name: 'Black'
+    dark_gray:
+      name: 'Dark Gray'
+    light_gray:
+      name: 'Light Gray'
+    white:
+      name: 'White'
+
+clothes:
+  helmet:
+    name: "Helmet"
+    slot: 10
+    leather:
+      name: 'Leather'
+    chainmail:
+      name: 'Chainmail'
+    gold:
+      name: 'Gold'
+    iron:
+      name: 'Iron'
+    diamond:
+      name: 'Diamond'
+  chestplate:
+    name: "Chestplate"
+    slot: 19
+    leather:
+      name: 'Leather'
+    chainmail:
+      name: 'Chainmail'
+    gold:
+      name: 'Gold'
+    iron:
+      name: 'Iron'
+    diamond:
+      name: 'Diamond'
+  leggings:
+    name: "Leggings"
+    slot: 28
+    leather:
+      name: 'Leather'
+    chainmail:
+      name: 'Chainmail'
+    gold:
+      name: 'Gold'
+    iron:
+      name: 'Iron'
+    diamond:
+      name: 'Diamond'
+  boots:
+    name: "Boots"
+    slot: 37
+    leather:
+      name: 'Leather'
+    chainmail:
+      name: 'Chainmail'
+    gold:
+      name: 'Gold'
+    iron:
+      name: 'Iron'
+    diamond:
+      name: 'Diamond'
