@@ -1,0 +1,26 @@
+menu:
+  title: 'Pets'
+  items:
+    remove: 'BARRIER : nome>&cRemove current pet.'
+  replaces:
+    lore: '&7Stroll through the lobby using the\n&7{name}&7 pet.\n\n{status}'
+    select: '&e➟ Click to select this pet.'
+    selected: '&6This pet is already selected.'
+    not: '&cYou don''t have this pet!'
+
+pets:
+  pig:
+    name: 'Pig'
+    icon: 'HEAD:3 : owner_id>e1e1c2e4-1ed2-473d-bde2-3ec718535399 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+  cow:
+    name: 'Cow'
+    icon: 'HEAD:3 : owner_id>97ddf3b3-9dbe-4a3b-8a0f-1b19ddeac0bd : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWQ2YzZlZGE5NDJmN2Y1ZjcxYzMxNjFjNzMwNmY0YWVkMzA3ZDgyODk1ZjlkMmIwN2FiNDUyNTcxOGVkYzUifX19'
+  mooshroom:
+    name: 'Mooshroom'
+    icon: 'HEAD:3 : owner_id>e206ac29-ae69-475b-909a-fb523d894336 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDBiYzYxYjk3NTdhN2I4M2UwM2NkMjUwN2EyMTU3OTEzYzJjZjAxNmU3YzA5NmE0ZDZjZjFmZTFiOGRiIn19fQ=='
+  chicken:
+    name: 'Chicken'
+    icon: 'HEAD:3 : owner_id>7d3a8ace-e045-4eba-ab71-71dbf525daf1 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ=='
+  sheep:
+    name: 'Sheep'
+    icon: 'HEAD:3 : owner_id>fa234925-9dbe-4b8f-a544-7c70fb6b6ac5 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjMxZjljY2M2YjNlMzJlY2YxM2I4YTExYWMyOWNkMzNkMThjOTVmYzczZGI4YTY2YzVkNjU3Y2NiOGJlNzAifX19'
