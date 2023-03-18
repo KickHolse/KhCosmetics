@@ -1,0 +1,15 @@
+# crafted by kick#0808
+# hello friend :)
+
+options:
+  item:
+    slot: 4
+    icon: '416 : nome>&eCosmetics'
+  worlds:
+  - 'world'
+  pets:
+    default_name: '{khcore_colored}&f''s pet'
+  pagged:
+    next_page: 'LIGHT_GREEN_DYE : 1 : nome>&aNext page : desc>&7Go to page {next_page}.'
+    previous_page: 'GRAY_DYE : 1 : nome>&aPrevious page : desc>&7Return to page {previous_page}.'
+    back: 'ROSE_RED : 1 : nome>&cCome back'
