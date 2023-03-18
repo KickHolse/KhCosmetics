@@ -1,0 +1,65 @@
+menu:
+  title: 'Animated Hats'
+  items:
+    remove: 'BARRIER : nome>&cRemove current animated hat.'
+  replaces:
+    lore: '&7Stroll around the lobby wearing\n&7{name}&7''s animated hat.\n\n{status}'
+    select: '&e➟ Click to select this animated hat.'
+    selected: '&6This animated hat is already selected.'
+    not: '&cYou don''t have this animated hat!'
+
+animated_hats:
+  lovey:
+    name: 'Passionate'
+    icon: 'HEAD:3 : owner_id>7eed1a86-983c-4fd3-89d6-1f085396528b : value>eyJ0aW1lc3RhbXAiOjE0NjQ3MTg4MTAwNTIsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8xOWE2NGVlY2UzMmI1YjQ3YmVkNDYyZTVjM2I0YmE4ZDQ2OWQ4YWYyN2M3NGJiYmM0NTQ1Mjk1NGExYWUifX19'
+  love_struck:
+    name: 'Beats'
+    icon: 'HEAD:3 : owner_id>7bde1a86-983c-4fd3-89d6-1f085396528b : value>eyJ0aW1lc3RhbXAiOjE0NjU3NjEyNTYyMzMsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mZDI2YWU0YjU3OTNkMDg3ZTYyYTJjZjNmMzQzNTk4MjlkMDI4NjlhYWU2NjI2YmZjZmY1OWRlMTQ2OWY1MSJ9fX0'
+  cry:
+    name: 'Crying'
+    icon: 'HEAD:3 : owner_id>7eed1a86-983b-4fd3-95d6-1f085216528a : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWYxYjg3NWRlNDljNTg3ZTNiNDAyM2NlMjRkNDcyZmYyNzU4M2ExZjA1NGYzN2U3M2ExMTU0YjViNTQ5OCJ9fX0'
+  rage:
+    name: 'Raging'
+    icon: 'HEAD:3 : owner_id>7aad1a86-983c-4fd3-95d6-1f085372628a : value>eyJ0aW1lc3RhbXAiOjE0NjM2NDAxMDIzNjcsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mYTE1MWNlYjY2YjM0MTI3NzVlOWQ0NDg3OTA0NmEzOThkYmRiN2RmY2IwYWY1NzFiN2EwM2U3MmQ5ZmJmMSJ9fX0'
+  surprised:
+    name: 'Astonished'
+    icon: 'HEAD:3 : owner_id>7eed1a86-654e-4fd3-95d6-1f085396528a : value>eyJ0aW1lc3RhbXAiOjE0NjM2ODI1MTA0MTIsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80NTg2ODUyOWZiZjRiZTYyOTM3MTI3NWIxMTM4ZGFiOTI5NTc2MDIxNzE2ZWU3MzdkYjEyNjM0YWExMjVhZjMifX19'
+  smile:
+    name: 'Happy'
+    icon: 'HEAD:3 : owner_id>7eed1a86-983c-4fd3-95d6-1f085372628a : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJlOTgxNjVkZWVmNGVkNjIxOTUzOTIxYzFlZjgxN2RjNjM4YWY3MWMxOTM0YTQyODdiNjlkN2EzMWY2YjgifX19'
+  cool:
+    name: 'Cool'
+    icon: 'HEAD:3 : owner_id>7eed1a86-983c-4fd3-95d6-1f085395628a : value>eyJ0aW1lc3RhbXAiOjE0NjM2ODEyNDgxMzAsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80NGM4Y2QzMWJhYzY1N2EzZjI2YjUyZTI2MmM4M2ViODMzOGQ1NjY1MWZkMjJjMTYzMzU2NWYzZGJiYzQ1Nzc3In19fQ' 
+  sleepy:
+    name: 'Sleeper'
+    icon: 'HEAD:3 : owner_id>7eed1a86-983c-4fd3-95d6-1b085372628a : value>eyJ0aW1lc3RhbXAiOjE0NjM2NzU2MTM3MTUsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83ZDlmMGYxOWVmMTYxYmZhYmFlYWE0OWM1Mjg4MGJlY2ZlODJmYjk2MmJiYjIxN2QxNzQzZDBmMWI1M2E5NSJ9fX0'
+  relax:
+    name: 'Chilled Out'
+    icon: 'HEAD:3 : owner_id>7bde1a86-775c-4fd3-89d6-1f085396528b : value>eyJ0aW1lc3RhbXAiOjE0NjU3NjI0MTM2NjUsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83MjBmMTU4ZWE3NzFhZGYwODYyZTdjMWExOWYwMTQwOWNkZGQ2ZWRmZDY0Mzg1NjgyZWQ3YmM2NTNlZGEzIn19fQ'
+  spicy:
+    name: 'Spicy'
+    icon: 'HEAD:3 : owner_id>7bde1a86-775c-4fd3-89a4-1f012396542a : value>eyJ0aW1lc3RhbXAiOjE0NjU3NjgyODcxNTcsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80OWYwNDgyY2E2YmE1OTlmYmVkNDZhMWU3YmIzMzI0NTlhYzEzMjFiYjVjYzJkYzliZjJhMmJhN2Y2MWI4In19fQ'
+  wink:
+    name: 'Wink'
+    icon: 'HEAD:3 : owner_id>7eed1a86-983c-4fd3-95d6-1f085396528a : value>eyJ0aW1lc3RhbXAiOjE0NjM2ODMzNTA0OTUsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS85ZDllYjYwZDkyYzFmZjJlOWNlYzY1ZGRjMjNjMmZiN2UxMjQ1MGIzNjA3MWRkZGQ2NjkwZjg4NzU0ODZkOCJ9fX0'
+  cheeky:
+    name: 'Giving Tongue'
+    icon: 'HEAD:3 : owner_id>0beedb99-f64e-4a26-93f3-8f3af84050aa : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZmYWNjZjE3ODc5YjE3ODkxZmM1ZWY2NjQ3MmNjMDY2YTg1YmZhMzFiNmQ3ODZjMzJhZmVlNDc5NjA2OGQifX19'
+  grin:
+    name: 'Smiling'
+    icon: 'HEAD:3 : owner_id>7eed1b86-983c-4fd3-95d6-1f085372628a : value>eyJ0aW1lc3RhbXAiOjE0NjM2MDkxMDUyMTYsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84ZDhmNWZiMzg3Y2E2NmZjMmY2NWI5MWZjYjIzMTYwNDU0OGU4NTY1ODk1YmI5NmM2NzY5ODQyMDVlNmYxOSJ9fX0'
+  blush:
+    name: 'Shy'
+    icon: 'HEAD:3 : owner_id>7bde1a86-775c-4fd3-89a4-1f085396528b : value>eyJ0aW1lc3RhbXAiOjE0NjU3NjMwNjE0ODYsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8yZjdlNmMwNzllZmE2OWNiM2EyM2RkM2IxNDc2NDNjN2NiNWU1YzkxMjliNzRhZjBjYWI0N2IwNGYzNTVhIn19fQ'
+  goofy:
+    name: 'Crazy'
+    icon: 'HEAD:3 : owner_id>7edd1c86-983c-4fd3-94a6-1f958396528c : value>eyJ0aW1lc3RhbXAiOjE0NjQ3MTgzNjI2MzMsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80NDNhZDdkMTZkODQxODgxYmFmMTEzZGFjZTYwYTJjZTZjNDczYTgwNTM1OTQ4ZWJjZWFkNDk5OTJjNWI5NmEifX19'
+  tan:
+    name: 'Tanned'
+    icon: 'HEAD:3 : owner_id>7bde1a86-715c-4fd3-89a4-1f012396542a : value>eyJ0aW1lc3RhbXAiOjE0NjU3NzU3NDU2OTAsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS84MDM4ODllNDRiNTU0NjVhYmZmNWNlZGM1Yjg2ZDNiZGEzNDZiYzcwYzliZjhiOTdmY2Y3OTM5NDhmMzc5YzEifX19'
+  rip:
+    name: 'Deaded'
+    icon: 'HEAD:3 : owner_id>7bde1a86-775c-4fd3-89a4-1f012362628b : value>eyJ0aW1lc3RhbXAiOjE0NjU3Njc0MTgzMDAsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80MzljM2RmN2E2MjhhZjhkNzUxZWNjYTE5NzY0MmNkYzFhMDdjMzBlMzI4OWIyZDMyNjFmN2E2NWNmMzk1YiJ9fX0'
+  dizzy:
+    name: 'Dizzy'
+    icon: 'HEAD:3 : owner_id>7bde1a86-775c-4fd3-89a4-1f013216528b : value>eyJ0aW1lc3RhbXAiOjE0NjU5MjI2MzUyNjEsInByb2ZpbGVJZCI6ImY1ODgyOTVlY2UyZDRhODZiMTA5YzBkMTI4MDM0YjFkIiwicHJvZmlsZU5hbWUiOiJfU2FzaGllXyIsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iYTE1MWE1NWViYTczNGYxYzY1MWJiYzdlNzE3Y2M4YTdmZjU1NzVkNjgwNGYxMzdkMWNkMjE2MTMxNDk4OWYifX19'
