@@ -1,6 +1,6 @@
 # KhCosmetics informations
 - Server version: 1.8x
-- Depend: [KhCore](https://github.com/KickHolse/KhCore) and SkDragon
+- Depend: [KhCore](https://github.com/KickHolse/KhCore) and [SkDragon](https://www.mediafire.com/file/whcz22n6e61gs9u/skDragon.jar/file)
 ###### For any other pieces of information, don't hesitate to contact me via Discord!
 <hr>
 
