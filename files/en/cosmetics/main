@@ -1,0 +1,81 @@
+menu:
+  title: 'Cosmetics'
+  rows: 4
+  items:
+    heads:
+      slot: 10
+      icon: 'HEAD:3 : nome>&aAll types of Heads : desc>&7Here you will find all hat options to\n&7wear in the lobby!\n\n &7Available cosmetics:\n &f▪ Animated Hats\n &f▪ Banners\n &f▪ Hats\n\n&e➟ Click to browse! : owner_id>df3aac10-9acb-4cd9-9817-faf6e4aa8fef : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI3MTZlY2JmNWI4ZGEwMGIwNWYzMTZlYzZhZjYxZThiZDAyODA1YjIxZWI4ZTQ0MDE1MTQ2OGRjNjU2NTQ5YyJ9fX0='
+    clothes:
+      slot: 11
+      icon: 'LEATHER_CHESTPLATE : pintar>orange : nome>&aWardrobe : desc>&7Customize your armor however you\n&7like!\n\n{status}'
+      replaces:
+        permission: '&cExclusive cosmetic for &6MVP&c players.'
+        view: '&7 Selected parts:\n{list}\n\n&e➟ Click to browse!'
+        format: ' &f▪ {part}'
+        none: ' &f▪ None'
+    particles:
+      slot: 14
+      icon: 'BLAZE_POWDER : nome>{color}Particles : desc>&7Choose particles of different colors\n&7and shapes to use in lobbies.\n\n &7Unlocked: {color}{have}/{max} &8({percent}%)\n &7Selected: &f{selected}\n\n&e➟ Click to browse!'
+      replaces:
+        none: 'None'
+    allpets:
+      slot: 15
+      icon: '420 : nome>&aAll Types of Pets : desc>&7Here you will find all available pets\n&7and companions!\n\n &7Available cosmetics:\n &f▪ Companions\n &f▪ Pets\n\n&e➟ Click to browse!'
+      replaces:
+        none: 'None'
+    gadgets:
+      slot: 16
+      icon: '379 : nome>&cToys : desc>&7Have fun with our different types of\n&7toys available.\n\n&cThis type of cosmetic is unavailable.'
+      replaces:
+        none: 'None'
+    morphs:
+      slot: 23
+      icon: 'HEAD:2 : nome>&cMorphs : desc>&7Transform into a special mob and while\n&7walking through our lobbies.\n\n&cThis type of cosmetic is unavailable.'
+      replaces:
+        none: 'None'
+    baloons:
+      slot: 24
+      icon: 'HEAD:3 : nome>&cBalloons : desc>&7Choose a stylish balloon to go through\n&7our lobbies.\n\n&cThis type of cosmetic is unavailable. : owner_id>fca26528-e970-4406-9a1a-5da3c6b71ad8 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc4OWIzZTI4NjhkNzE2YTkyMWRlYzU5MzJkNTMwYTg5MmY2MDAyMzVmMTg3NzY2YmMwMmQxNDVlZDE2ODY1YiJ9fX0='
+      #icon: 'HEAD:3 : nome>&cBalloons : desc>&7Choose a stylish balloon to go through\n&7our lobbies.\n\n&cThis type of cosmetic is unavailable. : owner_id>db624072-0651-40bb-ad09-91ead55ec192 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2I3ZTQ0MjhiNmNjY2JmOWMzYzZlZTllNzJlZWRhY2YxMWNmYjdiZmE5MzdlYTRiMGM5OTM4YzllNjM4NGM4In19fQ=='
+    cloaks:
+      slot: 25
+      icon: '381 : nome>{color}Cloaks : desc>&7Choose one of the different covers\n&7available to place on your back.\n&7All cloaks are made of particles and\n&7can be used in the lobby.\n\n &7Unlocked: {color}{have}/{max} &8({percent}%)\n &7Selected: &f{selected}\n\n&e➟ Click to browse!'
+      replaces:
+        none: 'None'
+  heads:
+    title: 'Cosmetics - Heads'
+    rows: 4
+    items:
+      animated_hats:
+        slot: 11
+        icon: 'HEAD:3 : nome>{color}Animated Hats : desc>&7Choose an animated hat to display\n&7the most diverse reactions.\n\n &7Unlocked: {color}{have}/{max} &8({percent}%)\n &7Selected: &F{selected}\n\n&e➟ Click to browse! : owner_id>7eed1a86-983c-4fd3-95d6-1f085372628a : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJlOTgxNjVkZWVmNGVkNjIxOTUzOTIxYzFlZjgxN2RjNjM4YWY3MWMxOTM0YTQyODdiNjlkN2EzMWY2YjgifX19'
+        replaces:
+          none: 'None'
+      hats:
+        slot: 13
+        icon: 'HEAD:3 : nome>{color}Hats : desc>&7Choose a hat to walk in style\n&7in our lobbies.\n\n &7Unlocked: {color}{have}/{max} &8({percent}%)\n &7Selected: &f{selected}\n\n&e➟ Click to browse! : owner_id>628f15d0-e39c-4fd9-9c4e-8c41d4f54b29 : value>eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBiZjM0YTcxZTc3MTViNmJhNTJkNWRkMWJhZTVjYjg1Zjc3M2RjOWIwZDQ1N2I0YmZjNWY5ZGQzY2M3Yzk0In19fQ=='
+        replaces:
+          none: 'None'
+      banners:
+        slot: 15
+        icon: '425 : nome>{color}Banners : desc>&7Choose banners with many different\n&7designs to use in lobbies!\n\n &7Unlocked: {color}{have}/{max} &8({percent}%)\n &7Selected: &f{selected}\n\n&e➟ Click to browse! : nbt>{HideFlags:32,BlockEntityTag:{Base:12,Patterns:[{Pattern:sc,Color:3},{Pattern:ms,Color:10},{Pattern:hhb,Color:3},{Pattern:bs,Color:7},{Pattern:ts,Color:2},{Pattern:bo,Color:12}]}}'
+        replaces:
+          none: 'None'
+      back:
+        slot: 31
+        icon: 'ROSE_RED : 1 : nome>&cCome back'
+  allpets:
+    title: 'Cosmetics - All Pets'
+    rows: 4
+    items:
+      pets:
+        slot: 12
+        icon: 'BONE : nome>{color}Pets : desc>&7Stroll through our lobbies accompanied\n&7by an affectionate pet!\n\n &7Unlocked: {color}{have}/{max} &8({percent}%)\n &7Selected: &f{selected}\n\n&e➟ Click to browse!'
+        replaces:
+          none: 'None'
+      companions:
+        slot: 14
+        icon: '420 : nome>&cCompanions : desc>&7Stroll through our lobbies using one of\n&7the many companions available!\n\n&cThis type of cosmetic is unavailable.'
+      back:
+        slot: 31
+        icon: 'ROSE_RED : 1 : nome>&cCome back'
