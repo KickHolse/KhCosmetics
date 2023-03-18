@@ -1,0 +1,63 @@
+menu:
+  title: 'Particles'
+  items:
+    remove: 'BARRIER : nome>&cRemove current particle.'
+  replaces:
+    lore: '&7Walk through the lobby using the\n&7{name}&7 particle.\n\n{status}'
+    packages: '&7Walk around the lobby using the {name}\n&7category particle.\n\n&7Available particles: ({size}):\n{list}\n\n&e➟ Click to browse!'
+    select: '&e➟ Click to select this particle.'
+    selected: '&6This particle is already selected.'
+    not: '&cYou don''t have this particle.'
+
+particles:
+  heart:
+    name: 'Hearts'
+    icon: '38'
+  redstone:
+    name: 'Redstone'
+    icon: '331'
+  slime:
+    name: 'Slime'
+    icon: '341'
+  mobspell:
+    name: 'Mob Spell'
+    icon: '402'
+  lava:
+    name: 'Lava'
+    icon: '385'
+  enchantmenttable:
+    name: 'Enchantment Table'
+    icon: '116'
+  angryvillager:
+    name: 'Angry Villager'
+    icon: 'BLAZE_ROD'
+  happyvillager:
+    name: 'Happy Villager'
+    icon: 'EMERALD'
+  waterdrip:
+    name: 'Water Splash'
+    icon: 'WATER_BUCKET'
+  lavadrip:
+    name: 'Lava Splash'
+    icon: 'LAVA_BUCKET'
+  note:
+    name: 'Musical Note'
+    icon: 'NOTE_BLOCK'
+  portal:
+    name: 'Nether Portal'
+    icon: 'OBSIDIAN'
+  fireworkspark:
+    name: 'Spark of Fireworks'
+    icon: '401'
+  witchspell:
+    name: 'Witch Spell'
+    icon: '372'
+  flame:
+    name: 'Flames'
+    icon: 'BLAZE_POWDER'
+  cloud:
+    name: 'Clouds'
+    icon: '351:15'
+  smoke:
+    name: 'Smoke'
+    icon: '362'
