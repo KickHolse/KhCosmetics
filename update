@@ -1,543 +1,456 @@
 # ─────────────────────────────────────────────────── #
-#                 ▒███████▒ ███▄    █     ──          #
-#                 ▒ ▒ ▒ ▄▀░ ██ ▀█   █                 #
-#     ───         ░ ▒ ▄▀▒░ ▓██  ▀█ ██▒                #
-#                   ▄▀▒   ░▓██▒  ▐▌██▒                #
-#                 ▒███████▒▒██░   ▓██░                #
-#                 ░▒▒ ▓░▒░▒░ ▒░   ▒ ▒                 #
-#                 ░░▒ ▒ ░ ▒░ ░░   ░ ▒░                #
-#                 ░ ░ ░ ░ ░   ░   ░ ░      ───        #
-#                   ░ ░             ░                 #
-#   ─             ░                                   #
+#                    ██ ▄█▀  ██████                   #
+#                    ██▄█▒ ▒██    ▒                   #
+#                   ▓███▄░ ░ ▓██▄                     #
+#                   ▓██ █▄   ▒   ██▒                  #
+#                   ▒██▒ █▄▒██████▒▒                  #
+#                   ▒ ▒▒ ▓▒▒ ▒▓▒ ▒ ░                  #
+#                   ░ ░▒ ▒░░ ░▒  ░ ░                  #
+#                   ░ ░░ ░ ░  ░  ░                    #
+#                   ░  ░         ░                    #
 # ─────────────────────────────────────────────────── #
 options:
-#	Nome: KhCollectibles | Autor: Kiberzn
-	version: 1.2
+#	KhCosmetics | crafted by Kick Holse
+	version: 1.3
 
-# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── #
-# events
-on join:
-	khcore_notifyUpdate(player, "KhCollectibles", "khcollectibles", "76731", "{@version}", "khcl atualizar")
-	file "plugins/KhCollectibles/players/%player%.yml" doesn't exist:
-		create file "plugins/KhCollectibles/players/%player%.yml"
-		khcollects_stats(player)
-	set {_list::*} to skutil yaml list "enabled-worlds" from file "plugins/KhCollectibles/config.yml"
-	loop {_list::*}:
-		loop-value == "%player's world%":
-			khcollects_setup(player, "hotbar")
-on quit:
-	loop "particles" and "clothes" and "banners" and "animatedhats" and "hats": 
-		khcollects_clear(player, "%loop-value%", "false")
-on player world change:
-	set {_list::*} to skutil yaml list "enabled-worlds" from file "plugins/KhCollectibles/config.yml"
-	loop {_list::*}:
-		loop-value == "%player's world%":
-			khcollects_setup(player, "hotbar")
-			stop
-	loop "particles" and "clothes" and "banners" and "animatedhats" and "hats": 
-		khcollects_clear(player, "%loop-value%", "false")
-on click:
-	set {_list::*} to skutil yaml list "enabled-worlds" from file "plugins/KhCollectibles/config.yml"
-	loop {_list::*}:
-		loop-value == "%player's world%":
-			name of event-item == khcore_getName({khcl::hotbar_collectibles}):
-				khcollects_menus(player, "main")
-			loop "ironman" and "thor":
-				set {_nome-%loop-value-2%} to yml value "clothes.%loop-value-2%.name" from file "plugins/KhCollectibles/collectibles/clothes.yml"
-			name of event-item == "&a%{_nome-ironman}%":
+# PERMISSIONS
+#
+# khcs.<category>.<cosmetic/package>.<cosmetic>
+# khcs.<category>.<cosmetic/package>.*
+# khcs.<category>.*
+# khcs.wardrobe
+# khcs.*
+
+#                  E  V  E  N  T  S                   #
+# ─────────────────────────────────────────────────── #
+join:
+	kcs_stats(player)
+	kcs_loadPerms(player)
+	kcs_update(player)
+quit:
+	stopEffect id "khcs::cloaks::%player%"
+	stopEffect id "khcs::players::%player%"
+	loop all entities:
+		name of loop-entity is kcs_petName(player):
+			kill loop-entity
+join: 
+	while player is online:
+		distance between {_loc} and player is higher than 0:
+			set {_x} to {_x}
+		else:
+			stopEffect id "khcs::cloaks::%player%"
+			set {_cloak} to yaml value "%uuid of player%.selected.cloaks" from file "plugins/KhCosmetics/players/%uuid of player%.yml"
+			{_cloak} is not "":
+				{_cloak} is "halloween_wing":
+					drawWings style 12, particle1 "redstone", RGB 0, 0, 0, particle2 "redstone", RGB2 245, 122, 0, particle3 "redstone", RGB3 245, 122, 0, center player, id "khcs::cloaks::%player%", angle 110, height 0, space 0.2, visibleRange 30, tps 0, second 3
+				{_cloak} is "green_wing":
+					drawWings style 6, particle1 "redstone", RGB 0, 204, 102, particle2 "redstone", RGB2 2, 204, 0, particle3 "redstone", RGB3 51, 255, 0, center player, id "khcs::cloaks::%player%", angle 110, height 0, space 0.2, visibleRange 30, tps 0, second 3
+				{_cloak} is "orange_wing":
+					drawWings style 4, particle1 "redstone", RGB 255, 77, 0, particle2 "redstone", RGB2 255, 119, 61, particle3 "redstone", RGB3 255, 51, 0, center player, id "khcs::cloaks::%player%", angle 110, height 0, space 0.2, visibleRange 30, tps 0, second 3
+				{_cloak} is "magenta_wing":
+					drawWings style 7, particle1 "redstone", RGB 255, 0, 204, particle2 "redstone", RGB2 179, 0, 255, particle3 "redstone", RGB3 204, 102, 255, center player, id "khcs::cloaks::%player%", angle 110, height 0, space 0.2, visibleRange 30, tps 0, second 3
+				{_cloak} is "blue_wing":
+					drawWings style 12, particle1 "redstone", RGB 0, 184, 245, particle2 "redstone", RGB2 51, 102, 255, particle3 "redstone", RGB3 0, 0, 204, center player, id "khcs::cloaks::%player%", angle 110, height 0, space 0.2, visibleRange 30, tps 0, second 3
+		set {_loc} to location of player
+		wait 3 seconds
+damage:
+	loop all entities:
+		loop all players:
+			name of loop-entity-1 is kcs_petName(loop-player):
 				cancel event
-				block under player is not air:
-					push player upwards at speed 1.0
-					push player forward at speed 0.5
-					set {dano-%player%} to true
-					khcore_playSound(player, FIREWORK_LAUNCH, 1.0, 5.0)
-					wait 15 ticks
-					khcore_playSound(player, FIREWORK_LARGE_BLAST, 1.0, 5.0)
-					wait 15 ticks
-					khcore_playSound(player, FIREWORK_TWINKLE, 1.0, 5.0)
-			name of event-item == "&a%{_nome-thor}%":
-				cancel event
-				strike fake fake lightning at target block of player
-				set {_players::*} to all players in radius 10 of target block of player
-				khcore_playSound({_players::*}, AMBIENCE_THUNDER, 1.0, 5.0)
-on drop:
-	set {_list::*} to skutil yaml list "enabled-worlds" from file "plugins/KhCollectibles/config.yml"
-	loop {_list::*}:
-		loop-value == "%player's world%":
-			name of event-item == khcore_getName({khcl::hotbar_collectibles}):
-				cancel event
-			loop "ironman" and "thor":
-				set {_nome-%loop-value-2%} to yml value "clothes.%loop-value-2%.name" from file "plugins/KhCollectibles/collectibles/clothes.yml"
-				name of event-item == "&a%{_nome-%loop-value-2%}%":
-					cancel event
-on damage of player:
-	{dano-%victim%} == true:
+combust:
+	name of event-entity is kcs_petName(player):
 		cancel event
-		delete {dano-%victim%}
+death:
+	name of event-entity is kcs_petName(player):
+		clear drops
+rightclick on entity:
+	name of event-entity is kcs_petName(player):
+		cancel event
+		make player ride clicked entity
+		while vehicle of player is clicked entity:
+			set {_loc} to block infront of player
+			block infront of player's vehicle is not air or tall grass or long grass:
+				block above block infront of player's vehicle is air:
+					push player's vehicle upwards at speed 0.15
+			push player's vehicle in horizontal direction of player at speed 0.06
+			wait 1 tick
+any move:
+	stopEffect id "khcs::cloaks::%player%"
+player world change:
+	kcs_update(player)
+click:
+	event-item is deserializeItem(yaml value "options.item.icon" from "ks.cs.language", player):
+		main_chest(player)
 
-# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── #
-# commands
-command /khcl [<text = help>] [<text>]:
+#               C  O  M  M  A  N  D  S                #
+# ─────────────────────────────────────────────────── #
+command cosmetics:
 	trigger:
-		arg 1 == "help":
-			send "%nl%&e  Ajuda - Colecionáveis 1/1%nl% "
-			send "&3 /khcl main &f- &7Abre o menu principal"
-			player has permission "khcollectibles.update" or "khcollectibles.*":
-				send "&3 /khcl atualizar &f- &7Atualiza o skript"
-			send newline
-		arg 1 == "atualizar":
-			player has permission "khcollectibles.update" or "khcollectibles.*":
-				khcore_update(player, "%{khcl::check_update}%", "KhCollectibles")
-		set {_list::*} to skutil yaml list "enabled-worlds" from file "plugins/KhCollectibles/config.yml"
-		loop {_list::*}:
-			loop-value == "%player's world%":
-				arg 1 == "clear":
-					loop "particles" and "clothes" and "banners" and "animatedhats" and "hats":
-						arg 2 == loop-value-2:
-							khcollects_clear(player, "%loop-value-2%", "true")
-				loop "animatedhats" and "main" and "banners" and "banners2" and "bannersa" and "clothes" and "hats" and "hats2" and "hats3" and "particles":
-					arg 1 == loop-value-2:
-						arg 2 is not set:
-							khcollects_menus(player, arg 1)
-						else:
-							loop-value-2 != "main"
-							khcollects_selCosmetic(player, "%loop-value-2%", arg 2, "true")
+		main_chest(player)
 
-# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── #
-# collectibles
-function khcollects_count(p: player):
-	loop "particles" and "animatedhats" and "clothes" and "banners" and "hats":
-		set yml value "%uuid of {_p}%.%loop-value%.count" of file "plugins/KhCollectibles/players/%{_p}%.yml" to 0
-	loop "sleepy" and "cool" and "dizzy" and "rip" and "tan" and "goofy" and "blush" and "grin" and "cheeky" and "wink" and "spicy" and "relax" and "smile" and "surprised" and "rage" and "cry" and "lovey" and "love-struck":
-		khcollects_addCount({_p}, "animatedhats", "%loop-value%")
-	loop "portal" and "happyvillager" and "lavadrip" and "angryvillager" and "waterdrip" and "note":
-		khcollects_addCount({_p}, "particles", "%loop-value%")
-	loop "flash" and "ironman" and "thor" and "frog":
-		khcollects_addCount({_p}, "clothes", "%loop-value%")
-	loop "lether-a" and "lether-b" and "skull" and "pokeball" and "heart" and "octopus" and "chat" and "flash" and "fox" and "enderman" and "batman-1992" and "batman-1995" and "knife" and "yin-yang" and "wall-of-bricks" and "penguin" and "pencil" and "radioactive" and "purple-lightsaber" and "green-lightsaber" and "nether-portal" and "duck" and "chicken" and "united-states's-flag" and "brazil's-flag" and "bow-tie" and "pineapple" and "deadpool":
-		khcollects_addCount({_p}, "banners", "%loop-value%")
-	loop "mario" and "luigi" and "goku" and "pokeball" and "beach-ball" and "dragon-ball" and "basketball" and "soccerball" and "alex" and "alex-teacher" and "alex-baker" and "alex-natal" and "alex-witch" and "silverfish" and "endermite" and "bat" and "wolf" and "squid" and "cave-spider" and "witch" and "zombie-pigman" and "enderman" and "villager" and "iron-golem" and "magma-cube" and "drowned" and "guardian" and "ghast" and "blaze" and "slime" and "skeleton" and "zombie" and "creeper" and "spider" and "snowman" and "bee" and "pig" and "rabbit" and "sheep" and "reindeer" and "donkey" and "horse" and "turtle" and "zebra" and "dog" and "chicken" and "frog" and "cow":
-		khcollects_addCount({_p}, "hats", "%loop-value%")
-function khcollects_addCount(p: player, type: text, perm: text):
-	{_p} has permission "khcollectibles.%{_type}%.%{_perm}%" or "khcollectibles.%{_type}%.*" or "khcollectibles.*":
-		set {_y} to yml value "%uuid of {_p}%.%{_type}%.count" from file "plugins/KhCollectibles/players/%{_p}%.yml"
-		add 1 to {_y}
-		set yml value "%uuid of {_p}%.%{_type}%.count" of file "plugins/KhCollectibles/players/%{_p}%.yml" to {_y}
-function khcollects_selCosmetic(p: player, type: text, cosmetic: text, msg: text):
-	yml value "%{_type}%.%{_cosmetic}%.name" from file "plugins/KhCollectibles/collectibles/%{_type}%.yml" exists:
-		{_p} has permission "khcollectibles.%{_type}%.%{_cosmetic}%" or "khcollectibles.%{_type}%.*" or "khcollectibles.*":
-			set {_nome} to yml value "%{_type}%.%{_cosmetic}%.name" from file "plugins/KhCollectibles/collectibles/%{_type}%.yml"
-			{_type} == "banners":
-				loop "animatedhats" and "hats":
-					khcollects_clear({_p}, "%loop-value%", "false")
-					set yml value "%uuid of {_p}%.%loop-value%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml" to "none"
-				set {_flag} to yml value "banners.%{_cosmetic}%.flag" from file "plugins/KhCollectibles/collectibles/banners.yml"
-				khcollects_equipBanner({_p}, {_flag}, {_nome})
-			{_type} == "hats":
-				loop "banners" and "animatedhats":
-					khcollects_clear({_p}, "%loop-value%", "false")
-					set yml value "%uuid of {_p}%.%loop-value%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml" to "none"
-				set {_own} to yml value "hats.%{_cosmetic}%.owner-id" from file "plugins/KhCollectibles/collectibles/hats.yml"
-				set {_va} to yml value "hats.%{_cosmetic}%.value" from file "plugins/KhCollectibles/collectibles/hats.yml"
-				khcollects_equipHats({_p}, {_own}, {_va}, {_nome})
-			{_type} == "particles":
-				khcollects_clear({_p}, "particles", "false")
-				set {_nome} to yml value "particles.%{_cosmetic}%.name" from file "plugins/KhCollectibles/collectibles/particles.yml"
-				khcollects_equipParticles({_p}, {_cosmetic})
-			{_type} == "clothes":
-				loop "helmet" and "chestplate" and "leggings" and "boots":
-					set {_item} to khcore_getItem({khcl::clothes_%{_cosmetic}%.armor.%loop-value%})
-					set {_name-%loop-value%} to khcore_getName({khcl::clothes_%{_cosmetic}%.armor.%loop-value%})
-					set {_color-%loop-value%} to khcore_getColor({khcl::clothes_%{_cosmetic}%.armor.%loop-value%}) parsed as color
-					{_item} contains "HEAD:owner=":
-						set {_x} to last element of {_item} split at "HEAD:owner="
-						{_x} == "{player}":
-							replace all "{player}" in {_x} with "%{_p}%"
-						set {_x} to "%{_x}%" parsed as offlineplayer
-						set {_item-%loop-value%} to skull of {_x}
-					else if {_item} contains "SHINY ":
-						replace all "SHINY " in {_item} with ""
-						set {_item-%loop-value%} to shiny "%{_item}%" parsed as material
-					else:
-						set {_item-%loop-value%} to "%{_item}%" parsed as material
-				loop "animatedhats" and "banners" and "hats" and "clothes":
-					khcollects_clear({_p}, "%loop-value%", "false")
-				khcollects_equipClothes({_p}, {_item-helmet}, {_item-chestplate}, {_item-leggings}, {_item-boots}, {_color-helmet}, {_color-chestplate}, {_color-leggings}, {_color-boots}, {_name-helmet}, {_name-chestplate}, {_name-leggings}, {_name-boots})
-				{_cosmetic} == "flash":
-					apply speed 3 without particles to {_p} for 9999 seconds
-				{_cosmetic} == "frog":
-					apply jump 2 without particles to {_p} for 9999 seconds
-				{_cosmetic} == "ironman":
-					set slot {khcl::slot-clothes-gadgets} of {_p} to firework_rocket named "&a%{_nome}%"
-				{_cosmetic} == "thor":
-					set slot {khcl::slot-clothes-gadgets} of {_p} to stone axe named "&a%{_nome}%"
-			{_type} == "animatedhats":
-				loop "animatedhats" and "banners" and "hats":
-					khcollects_clear({_p}, "%loop-value%", "false")
-					set yml value "%uuid of {_p}%.%loop-value%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml" to "none"
-				set {_nome} to yml value "animatedhats.%{_cosmetic}%.name" from file "plugins/KhCollectibles/collectibles/animatedhats.yml"
-				loop tan and rip and dizzy and spicy and wink and cheeky and grin and blush and goofy and surprised and smile and cool and sleepy and relax and lovey and cry and rage:
-					{_cosmetic} == "%loop-value%":
-						set {_emoji} to loop-value
-				{_cosmetic} == "love-struck":
-					set {_emoji} to love struck
-				emote {_emoji} on {_p} repeating 1000 times
-			{_msg} == "true":
-				khcollects_select({_p}, "%{_type}%", colored {_nome})
-			set yml value "%uuid of {_p}%.%{_type}%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml" to {_cosmetic}
-		else:
-			{_msg} == "true":
-				set {_y} to yml value "messages.not-have.%{_type}%" from file "plugins/KhCollectibles/language.yml"
-				send colored {_y} to {_p}
-	else:
-		send colored {khcl::not-found} to {_p}
-function khcollects_equipParticles(p: player, name: text):
-	drawSimpleHalo particle "%{_name}%", center {_p}, id "khcollects::%{_p}%", rainbowMode true, visibleRange 32
-	drawHalo particle "%{_name}%", RGB 0, 0, 0, center {_p}, id "khcollects::%{_p}%", rainbowMode true, solid true, visibleRange 32
-function khcollects_equipHats(p: player, owner: text, value: text, name: text):
-	set helmet of {_p} to player head with custom nbt "{SkullOwner:{Id:""%{_owner}%"",Properties:{textures:[{Value:""%{_value}%""}]}}}" named "&a%{_name}%"
-function khcollects_equipBanner(p: player, flag: text, name: text):
-	set helmet of {_p} to black_banner_item with custom nbt "%{_flag}%" named "&a%{_name}%"
-function khcollects_equipClothes(p: player, helmet: item, chestplate: item, leggings: item, boots: item, c1: color, c2: color, c3: color, c4: color, n1: text, n2: text, n3: text, n4: text):
-	equip {_p} with {_helmet} named {_n1}
-	equip {_p} with {_chestplate} named {_n2}
-	equip {_p} with {_leggings} named {_n3}
-	equip {_p} with {_boots} named {_n4}
-	dye {_p}'s helmet {_c1}
-	dye {_p}'s chestplate {_c2}
-	dye {_p}'s leggings {_c3}
-	dye {_p}'s boots {_c4}
-
-# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── #
-# file manager
-function khcollects_filemanager(use: text):
-	{_use} == "value":
-		delete {khcl::*}
-		loop "frog" and "disco" and "ironman" and "flash" and "thor":
-			loop "%loop-value%.armor.helmet" and "%loop-value%.armor.chestplate" and "%loop-value%.armor.leggings" and "%loop-value%.armor.boots":
-				set {khcl::clothes_%loop-value-2%} to yml value "clothes.%loop-value-2%" from file "plugins/KhCollectibles/collectibles/clothes.yml"
-		loop "particles" and "animatedhats" and "clothes" and "banners" and "hats":
-			set {khcl::snone_%loop-value%} to yml value "messages.selected.none.%loop-value%" from file "plugins/KhCollectibles/language.yml"
-		set {khcl::not-found} to yml value "messages.not-found" from file "plugins/KhCollectibles/language.yml"
-		set {khcl::slot-clothes-gadgets} to yml value "settings.slot-clothes-gadgets" from file "plugins/KhCollectibles/config.yml"
-		set {khcl::hotbar_collectibles} to yml value "lobby.hotbar.collectibles" from file "plugins/KhCollectibles/language.yml"
-	{_use} == "create":
-		file "plugins/KhCollectibles/language.yml" doesn't exist:
-			create file "plugins/KhCollectibles/config.yml"
-			delete file "plugins/KhCollectibles/config.yml"
-			khcore_downGithub("KhCollectibles/language.yml", "https://raw.githubusercontent.com/KickHolse/KhCollectibles/main/files/language")
-		file "plugins/KhCollectibles/config.yml" doesn't exist:
-			khcore_downGithub("KhCollectibles/config.yml", "https://raw.githubusercontent.com/KickHolse/KhCollectibles/main/files/config")
-		file "plugins/KhCollectibles/collectibles/clothes.yml" doesn't exist:
-			create file "plugins/KhCollectibles/collectibles/config.yml"
-			delete file "plugins/KhCollectibles/collectibles/config.yml"
-			khcore_downGithub("KhCollectibles/collectibles/clothes.yml", "https://raw.githubusercontent.com/KickHolse/KhCollectibles/main/files/collectibles/clothes")
-		loop "particles" and "animatedhats" and "hats" and "banners":
-			file "plugins/KhCollectibles/collectibles/%loop-value%.yml" doesn't exist:
-				khcore_downGithub("KhCollectibles/collectibles/%loop-value%.yml", "https://raw.githubusercontent.com/KickHolse/KhCollectibles/main/files/collectibles/%loop-value%")
-		khcollects_filemanager("value")
-
-# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── #
-# functions and sub
-function khcollects_stats(p: player):
-	set yml value "%uuid of {_p}%.name" of file "plugins/KhCollectibles/players/%{_p}%.yml" to "%{_p}%"
-	loop "animatedhats" and "banners" and "clothes" and "hats" and "particles":
-		set yml value "%uuid of {_p}%.%loop-value%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml" to "none"
-		set yml value "%uuid of {_p}%.%loop-value%.count" of file "plugins/KhCollectibles/players/%{_p}%.yml" to 0
-function khcollects_select(p: player, type: text, item: text):
-	set {_x} to yml value "messages.equip.%{_type}%" of file "plugins/KhCollectibles/language.yml"
-	replace all "{clothe}" and "{pet}" and "{banner}" and "{hat}" and "{animatedhat}" and "{particle}" with colored {_item} in {_x}
-	send colored {_x} to {_p}
-	khcore_playSound({_p}, NOTE_PLING, 1.0, 15.0)
-function khcollects_clear(p: player, type: text, t: text):
-	set {_x} to yml value "messages.remove.%{_type}%" of file "plugins/KhCollectibles/language.yml"
-	{_type} == "clothes":
-		set {_p}'s helmet to air
-		set {_p}'s chestplate to air
-		set {_p}'s leggings to air
-		set {_p}'s boots to air
-		remove speed and jump from {_p}
-		loop "ironman" and "thor":
-			set {_nome-%loop-value%} to yml value "clothes.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/clothes.yml"
-		remove firework_rocket named "&a%{_nome-ironman}%" from {_p}
-		remove stone axe named "&a%{_nome-thor}%" from {_p}
-	loop "banners" and "hats":
-		{_type} == loop-value
-		set {_p}'s helmet to air
-	{_type} == "animatedhats":
-		stop emote {_p}
-	{_type} == "particles":
-		stopEffect id "khcollects::%{_p}%"
-	{_t} == "true":
-		set yml value "%uuid of {_p}%.%{_type}%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml" to "none"
-		send colored {_x} to {_p}
-function khcollects_setup(p: player, event: text):
-	{_event} == "hotbar":
-		set {_slot} to khcore_getSlot({khcl::hotbar_collectibles}) parsed as int
-		set {_item} to khcore_getItem({khcl::hotbar_collectibles})
-		{_item} contains "HEAD:owner=":
-			set {_x} to last element of {_item} split at "HEAD:owner="
-			{_x} == "{player}":
-				replace all "{player}" in {_x} with "%{_p}%"
-			set {_x} to "%{_x}%" parsed as offlineplayer
-			set slot {_slot} of {_p} to skull of {_x} named khcore_getName({khcl::hotbar_collectibles}) with lore khcore_getLore({khcl::hotbar_collectibles})
-		else if {_item} contains "SHINY ":
-			replace all "SHINY " in {_item} with ""
-			set {_item} to "%{_item}%" parsed as material
-			set slot {_slot} of {_p} to shiny {_item} named khcore_getName({khcl::hotbar_collectibles}) with lore khcore_getLore({khcl::hotbar_collectibles})
-		else:
-			set {_item} to "%{_item}%" parsed as material
-			set slot {_slot} of {_p} to {_item} named khcore_getName({khcl::hotbar_collectibles}) with lore khcore_getLore({khcl::hotbar_collectibles})
-		loop "clothes" and "particles" and "animatedhats" and "banners" and "hats":
-			set {_s%loop-value%.%{_p}%} to yml value "%uuid of {_p}%.%loop-value%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml"
-			{_s%loop-value%.%{_p}%} != "none":
-				khcollects_selCosmetic({_p}, "%loop-value%", "%{_s%loop-value%.%{_p}%}%", "false")
-function khcollects_menus(p: player, type: text):
-	{_type} == "main":
-		wait 3 ticks
-		khcollects_count({_p})
-		khcore_makeGui({_p}, 3, "Colecionáveis")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		set {_mparticles} to 6
-		set {_manimatedhats} to 18
-		set {_mhats} to 48
-		set {_mclothes} to 4
-		set {_mbanners} to 28
-		loop "particles" and "animatedhats" and "hats" and "clothes" and "banners":
-			set {_count-%loop-value%.%{_p}%} to yml value "%uuid of {_p}%.%loop-value%.count" from file "plugins/KhCollectibles/players/%{_p}%.yml"
-			set {_x.%loop-value%} to (100 / {_m%loop-value%}) * {_count-%loop-value%.%{_p}%}
-			set {_s%loop-value%.%{_p}%} to yml value "%uuid of {_p}%.%loop-value%.selected" of file "plugins/KhCollectibles/players/%{_p}%.yml"
-			{_s%loop-value%.%{_p}%} != "none":
-				set {_s%loop-value%} to yml value "%loop-value%.%{_s%loop-value%.%{_p}%}%.name" from file "plugins/KhCollectibles/collectibles/%loop-value%.yml"
+#              F  U  N  C  T  I  O  N  S              #
+# ─────────────────────────────────────────────────── #
+function main_chest(p: Player, type: text="menu"):
+	open chest inventory with yaml value "%{_type}%.rows" from "ks.cs.cosmetics/main" rows named yaml value "%{_type}%.title" from "ks.cs.cosmetics/main" to {_p}
+	wait a tick
+	loop yaml nodes with keys "%{_type}%.items" from "ks.cs.cosmetics/main":
+		set {_loop} to loop-value
+		set {_icon} to yaml value "%{_type}%.items.%{_loop}%.icon" from "ks.cs.cosmetics/main"
+		set {_color} to "&c"
+		set {_max} to 0
+		{_loop} = "particles" or "cloaks" or "hats" or "animated_hats" or "banners" or "pets":
+			loop yaml nodes with keys {_loop} from "ks.cs.cosmetics/%{_loop}%":
+				set {_keys::*} to yaml nodes with keys "%{_loop}%.%loop-value-2%" from "ks.cs.cosmetics/%{_loop}%"
+				{_keys::*} contains "packages":
+					loop yaml nodes with keys "%{_loop}%.%loop-value-2%.packages" from "ks.cs.cosmetics/%{_loop}%":
+						add 1 to {_max}
+				else:
+					add 1 to {_max}
+			set {_contains} to size of yaml list "%uuid of {_p}%.cosmetics.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+			set {_selected} to yaml value "%uuid of {_p}%.selected.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+			{_selected} is "":
+				set {_selected} to yaml value "%{_type}%.items.%{_loop}%.replaces.none" from "ks.cs.cosmetics/main"
 			else:
-				set {_s%loop-value%} to colored {khcl::snone_%loop-value%}
-		format slot 10 of {_p} with leather chestplate named "&aRoupas" with lore "&7Use roupas de diversos tipos||&7para se exibir em nossos lobbies.||||&7 Desbloqueados: &f%{_count-clothes.%{_p}%}%/%{_mclothes}% &8(%{_x.clothes}%%%)||&7 Selecionado: &f%{_sclothes}%||||&eClique para abrir!" to run [make {_p} execute command "khcl clothes"]
-		format slot 11 of {_p} with bone named "&aPets" with lore "&7Passeie pelos nossos lobbies||&7acompanhado por um Pet!||||&7 Desbloqueados: &f-/- &8(-%%)||&7 Selecionado: &f-||||&eClique para abrir!" to run [make {_p} execute command ""]
-		format slot 12 of {_p} with blaze powder named "&aPartículas" with lore "&7Escolha partículas de diversas||&7cores e formatos para usar||&7nos lobbies.||||&7 Desbloqueados: &f%{_count-particles.%{_p}%}%/%{_mparticles}% &8(%{_x.particles}%%%)||&7 Selecionado: &f%{_sparticles}%||||&eClique para abrir!" to run [make {_p} execute command "khcl particles"]
-		format slot 14 of {_p} with player head with custom nbt "{display:{Name:""&aChapéus Animados""},SkullOwner:{Id:""7eed1a86-983c-4fd3-95d6-1f085372628a"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJlOTgxNjVkZWVmNGVkNjIxOTUzOTIxYzFlZjgxN2RjNjM4YWY3MWMxOTM0YTQyODdiNjlkN2EzMWY2YjgifX19""}]}}}" with lore "&7Escolha um chapéu animado para||&7exibir as mais diversas reações.||||&7 Desbloqueados: &f%{_count-animatedhats.%{_p}%}%/%{_manimatedhats}% &8(%{_x.animatedhats}%%%)||&7 Selecionado: &f%{_sanimatedhats}%||||&eClique para abrir!" to run [make {_p} execute command "khcl animatedhats"]
-		format slot 15 of {_p} with player head with custom nbt "{display:{Name:""&aChapéus""},SkullOwner:{Id:""628f15d0-e39c-4fd9-9c4e-8c41d4f54b29"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBiZjM0YTcxZTc3MTViNmJhNTJkNWRkMWJhZTVjYjg1Zjc3M2RjOWIwZDQ1N2I0YmZjNWY5ZGQzY2M3Yzk0In19fQ==""}]}}}" with lore "&7Escolha um chapéu para andar||&7com estilo em nossos lobbies.||||&7 Desbloqueados: &f%{_count-hats.%{_p}%}%/%{_mhats}% &8(%{_x.hats}%%%)||&7 Selecionado: &f%{_shats}%||||&eClique para abrir!" to run [make {_p} execute command "khcl hats"]
-		format slot 16 of {_p} with black_banner_item with custom nbt "{HideFlags: 32,BlockEntityTag:{Base:12,Patterns:[{Pattern:sc,Color:3},{Pattern:ms,Color:10},{Pattern:hhb,Color:3},{Pattern:bs,Color:7},{Pattern:ts,Color:2},{Pattern:bo,Color:12}]}}" named "&aBanners" with lore "&7Escolha banners com diversos||&7desenhos diferentes para usar||&7nos lobbies!||||&7 Desbloqueados: &f%{_count-banners.%{_p}%}%/%{_mbanners}% &8(%{_x.banners}%%%)||&7 Selecionado: &f%{_sbanners}%||||&eClique para abrir!" to run [make {_p} execute command "khcl banners"]
-	{_type} == "banners":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Banners 1/2")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "skull" and "pokeball" and "heart" and "octopus" and "chat" and "flash" and "fox" and "enderman" and "batman-1992" and "batman-1995" and "knife" and "yin-yang" and "wall-of-bricks" and "penguin" and "pencil" and "radioactive" and "purple-lightsaber" and "green-lightsaber" and "nether-portal" and "duck" and "chicken":
-			set {_nome-%loop-value%} to yml value "banners.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/banners.yml"
-			set {_flag-%loop-value%} to yml value "banners.%loop-value%.flag" from file "plugins/KhCollectibles/collectibles/banners.yml"
-		format slot 10 of {_p} with black_banner_item with custom nbt "%{_flag-nether-portal}%" named "&6%{_nome-nether-portal}%" with lore "" to run [Make {_p} execute command "khcl banners nether-portal"]
-		format slot 11 of {_p} with black_banner_item with custom nbt "%{_flag-duck}%" named "&6%{_nome-duck}%" with lore "" to run [Make {_p} execute command "khcl banners duck"]
-		format slot 12 of {_p} with black_banner_item with custom nbt "%{_flag-chicken}%" named "&6%{_nome-chicken}%" with lore "" to run [Make {_p} execute command "khcl banners chicken"]
-		format slot 13 of {_p} with black_banner_item with custom nbt "%{_flag-purple-lightsaber}%" named "&6%{_nome-purple-lightsaber}%" with lore "" to run [Make {_p} execute command "khcl banners purple-lightsaber"]
-		format slot 14 of {_p} with black_banner_item with custom nbt "%{_flag-green-lightsaber}%" named "&6%{_nome-green-lightsaber}%" with lore "" to run [Make {_p} execute command "khcl banners green-lightsaber"]
-		format slot 15 of {_p} with black_banner_item with custom nbt "%{_flag-radioactive}%" named "&6%{_nome-radioactive}%" with lore "" to run [Make {_p} execute command "khcl banners radioactive"]
-		format slot 16 of {_p} with black_banner_item with custom nbt "%{_flag-pencil}%" named "&6%{_nome-pencil}%" with lore "" to run [Make {_p} execute command "khcl banners pencil"]
-		format slot 19 of {_p} with black_banner_item with custom nbt "%{_flag-penguin}%" named "&6%{_nome-penguin}%" with lore "" to run [Make {_p} execute command "khcl banners penguin"]
-		format slot 20 of {_p} with black_banner_item with custom nbt "%{_flag-wall-of-bricks}%" named "&6%{_nome-wall-of-bricks}%" with lore "" to run [Make {_p} execute command "khcl banners wall-of-bricks"]
-		format slot 21 of {_p} with black_banner_item with custom nbt "%{_flag-yin-yang}%" named "&6%{_nome-yin-yang}%" with lore "" to run [Make {_p} execute command "khcl banners yin-yang"]
-		format slot 22 of {_p} with black_banner_item with custom nbt "%{_flag-knife}%" named "&6%{_nome-knife}%" with lore "" to run [Make {_p} execute command "khcl banners knife"]
-		format slot 23 of {_p} with black_banner_item with custom nbt "%{_flag-enderman}%" named "&6%{_nome-enderman}%" with lore "" to run [Make {_p} execute command "khcl banners enderman"]
-		format slot 24 of {_p} with black_banner_item with custom nbt "%{_flag-batman-1992}%" named "&6%{_nome-batman-1992}%" with lore "" to run [Make {_p} execute command "khcl banners batman-1992"]
-		format slot 25 of {_p} with black_banner_item with custom nbt "%{_flag-batman-1995}%" named "&6%{_nome-batman-1995}%" with lore "" to run [Make {_p} execute command "khcl banners batman-1995"]
-		format slot 28 of {_p} with black_banner_item with custom nbt "%{_flag-fox}%" named "&6%{_nome-fox}%" with lore "" to run [Make {_p} execute command "khcl banners fox"]
-		format slot 29 of {_p} with black_banner_item with custom nbt "%{_flag-flash}%" named "&6%{_nome-flash}%" with lore "" to run [Make {_p} execute command "khcl banners flash"]
-		format slot 30 of {_p} with black_banner_item with custom nbt "%{_flag-chat}%" named "&6%{_nome-chat}%" with lore "" to run [Make {_p} execute command "khcl banners chat"]
-		format slot 31 of {_p} with black_banner_item with custom nbt "%{_flag-octopus}%" named "&6%{_nome-octopus}%" with lore "" to run [Make {_p} execute command "khcl banners octopus"]
-		format slot 32 of {_p} with black_banner_item with custom nbt "%{_flag-heart}%" named "&6%{_nome-heart}%" with lore "" to run [Make {_p} execute command "khcl banners heart"]
-		format slot 33 of {_p} with black_banner_item with custom nbt "%{_flag-pokeball}%" named "&6%{_nome-pokeball}%" with lore "" to run [Make {_p} execute command "khcl banners pokeball"]
-		format slot 34 of {_p} with black_banner_item with custom nbt "%{_flag-skull}%" named "&6%{_nome-skull}%" with lore "" to run [Make {_p} execute command "khcl banners skull"]
-		format slot 26 of {_p} with arrow named "&bPágina 2" to run [Make {_p} execute command "khcl banners2"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear banners"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "banners2":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Banners 2/2")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "numbers" and "alphabet" and "united-states's-flag" and "brazil's-flag" and "bow-tie" and "pineapple" and "deadpool":
-			set {_nome-%loop-value%} to yml value "banners.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/banners.yml"
-			set {_flag-%loop-value%} to yml value "banners.%loop-value%.flag" from file "plugins/KhCollectibles/collectibles/banners.yml"
-		format slot 10 of {_p} with black_banner_item with custom nbt "%{_flag-deadpool}%" named "&6%{_nome-deadpool}%" with lore "" to run [Make {_p} execute command "khcl banners deadpool"]
-		format slot 11 of {_p} with black_banner_item with custom nbt "%{_flag-pineapple}%" named "&6%{_nome-pineapple}%" with lore "" to run [Make {_p} execute command "khcl banners pineapple"]
-		format slot 12 of {_p} with black_banner_item with custom nbt "%{_flag-bow-tie}%" named "&6%{_nome-bow-tie}%" with lore "" to run [Make {_p} execute command "khcl banners bow-tie"]
-		format slot 13 of {_p} with black_banner_item with custom nbt "%{_flag-brazil's-flag}%" named "&6%{_nome-brazil's-flag}%" with lore "" to run [Make {_p} execute command "khcl banners brazil's-flag"]
-		format slot 14 of {_p} with black_banner_item with custom nbt "%{_flag-united-states's-flag}%" named "&6%{_nome-united-states's-flag}%" with lore "" to run [Make {_p} execute command "khcl banners united-states's-flag"]
-		format slot 15 of {_p} with black_banner_item with custom nbt "%{_flag-alphabet}%" named "&a%{_nome-alphabet}%" with lore "" to run [Make {_p} execute command "khcl bannersa"]
-		format slot 16 of {_p} with black_banner_item with custom nbt "%{_flag-numbers}%" named "&a%{_nome-numbers}%" with lore "" to run [Make {_p} execute command ""]
-		format slot 18 of {_p} with arrow named "&bPágina 1" to run [Make {_p} execute command "khcl banners"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear banners"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "bannersa":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Banners - Alfabeto 1/2")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "lether-b" and "lether-a":
-			set {_nome-%loop-value%} to yml value "banners.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/banners.yml"
-			set {_flag-%loop-value%} to yml value "banners.%loop-value%.flag" from file "plugins/KhCollectibles/collectibles/banners.yml"
-		format slot 10 of {_p} with black_banner_item with custom nbt "%{_flag-lether-a}%" named "&6%{_nome-lether-a}%" with lore "" to run [Make {_p} execute command "khcl banners lether-a"]
-		format slot 11 of {_p} with black_banner_item with custom nbt "%{_flag-lether-b}%" named "&6%{_nome-lether-b}%" with lore "" to run [Make {_p} execute command "khcl banners lether-b"]
-		#format slot 26 of {_p} with arrow named "&bPágina 2" to run [Make {_p} execute command "khcl banners a2"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear banners"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl banners"]
-	{_type} == "clothes":
-		wait 3 ticks
-		khcore_makeGui({_p}, 4, "Roupas 1/1")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		set {_y} to "GallyTV" parsed as offlineplayer
-		set {_v} to "Thor" parsed as offlineplayer
-		loop "flash" and "ironman" and "frog" and "thor":
-			set {_nome-%loop-value%} to yml value "clothes.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/clothes.yml"
-		format slot 10 of {_p} with player head with custom nbt "{display:{Name:""&6%{_nome-flash}%""},SkullOwner:{Id:""2d85e7fa-c67c-48c4-8dc6-b4191c1abff6"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTVkOTcxMTg3ZWI5OGY5OWQwNmQ3M2UzYzE1MjUwZDFlMThmMGY2ZmY0NzJjOGM1OWRjYjhiMmNkN2ZjNzdjIn19fQ==""}]}}}" with lore "&7" to run [Make {_p} execute command "khcl clothes flash"]
-		format slot 11 of {_p} with skull of {_y} named "&6%{_nome-frog}%" with lore "&7" to run [Make {_p} execute command "khcl clothes frog"]
-		format slot 12 of {_p} with player head with custom nbt "{display:{Name:""&6%{_nome-ironman}%""},SkullOwner:{Id:""b0ab815c-0a0f-4eba-876c-c6f7962b7dc7"",Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjUyY2E5NzgzNGUwMTQ1ODY5MWM5MDU0NDU3ODZkMTI2MmQ4NDM2NjNkNjEyOGYzYmMwYzUzMTliOGE2OWU0In19fQ==""}]}}}" with lore "&7" to run [Make {_p} execute command "khcl clothes ironman"]
-		format slot 13 of {_p} with skull of {_v} named "&6%{_nome-thor}%" with lore "&7" to run [Make {_p} execute command "khcl clothes thor"]
-		format slot 30 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear clothes"]
-		format slot 32 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "hats":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Chapéus 1/3")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "ghast" and "blaze" and "slime" and "skeleton" and "zombie" and "creeper" and "spider" and "snowman" and "bee" and "pig" and "rabbit" and "sheep" and "reindeer" and "donkey" and "horse" and "turtle" and "zebra" and "dog" and "chicken" and "frog" and "cow":
-			set {_nome-%loop-value%} to yml value "hats.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/hats.yml"
-			set {_own-%loop-value%} to yml value "hats.%loop-value%.owner-id" from file "plugins/KhCollectibles/collectibles/hats.yml"
-			set {_va-%loop-value%} to yml value "hats.%loop-value%.value" from file "plugins/KhCollectibles/collectibles/hats.yml"
-		format slot 10 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-frog}%"",Properties:{textures:[{Value:""%{_va-frog}%""}]}}}" named "&6%{_nome-frog}%" with lore "" to run [Make {_p} execute command "khcl hats frog"]
-		format slot 11 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-cow}%"",Properties:{textures:[{Value:""%{_va-cow}%""}]}}}" named "&6%{_nome-cow}%" with lore "" to run [Make {_p} execute command "khcl hats cow"]
-		format slot 12 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-chicken}%"",Properties:{textures:[{Value:""%{_va-chicken}%""}]}}}" named "&6%{_nome-chicken}%" with lore "" to run [Make {_p} execute command "khcl hats chicken"]
-		format slot 13 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-dog}%"",Properties:{textures:[{Value:""%{_va-dog}%""}]}}}" named "&6%{_nome-dog}%" with lore "" to run [Make {_p} execute command "khcl hats dog"]
-		format slot 14 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-zebra}%"",Properties:{textures:[{Value:""%{_va-zebra}%""}]}}}" named "&6%{_nome-zebra}%" with lore "" to run [Make {_p} execute command "khcl hats zebra"]
-		format slot 15 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-turtle}%"",Properties:{textures:[{Value:""%{_va-turtle}%""}]}}}" named "&6%{_nome-turtle}%" with lore "" to run [Make {_p} execute command "khcl hats turtle"]
-		format slot 16 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-horse}%"",Properties:{textures:[{Value:""%{_va-horse}%""}]}}}" named "&6%{_nome-horse}%" with lore "" to run [Make {_p} execute command "khcl hats horse"]
-		format slot 19 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-donkey}%"",Properties:{textures:[{Value:""%{_va-donkey}%""}]}}}" named "&6%{_nome-donkey}%" with lore "" to run [Make {_p} execute command "khcl hats donkey"]
-		format slot 20 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-reindeer}%"",Properties:{textures:[{Value:""%{_va-reindeer}%""}]}}}" named "&6%{_nome-reindeer}%" with lore "" to run [Make {_p} execute command "khcl hats reindeer"]
-		format slot 21 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-sheep}%"",Properties:{textures:[{Value:""%{_va-sheep}%""}]}}}" named "&6%{_nome-sheep}%" with lore "" to run [Make {_p} execute command "khcl hats sheep"]
-		format slot 22 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-rabbit}%"",Properties:{textures:[{Value:""%{_va-rabbit}%""}]}}}" named "&6%{_nome-rabbit}%" with lore "" to run [Make {_p} execute command "khcl hats rabbit"]
-		format slot 23 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-pig}%"",Properties:{textures:[{Value:""%{_va-pig}%""}]}}}" named "&6%{_nome-pig}%" with lore "" to run [Make {_p} execute command "khcl hats pig"]
-		format slot 24 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-bee}%"",Properties:{textures:[{Value:""%{_va-bee}%""}]}}}" named "&6%{_nome-bee}%" with lore "" to run [Make {_p} execute command "khcl hats bee"]
-		format slot 25 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-snowman}%"",Properties:{textures:[{Value:""%{_va-snowman}%""}]}}}" named "&6%{_nome-snowman}%" with lore "" to run [Make {_p} execute command "khcl hats snowman"]
-		format slot 28 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-spider}%"",Properties:{textures:[{Value:""%{_va-spider}%""}]}}}" named "&6%{_nome-spider}%" with lore "" to run [Make {_p} execute command "khcl hats spider"]
-		format slot 29 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-creeper}%"",Properties:{textures:[{Value:""%{_va-creeper}%""}]}}}" named "&6%{_nome-creeper}%" with lore "" to run [Make {_p} execute command "khcl hats creeper"]
-		format slot 30 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-zombie}%"",Properties:{textures:[{Value:""%{_va-zombie}%""}]}}}" named "&6%{_nome-zombie}%" with lore "" to run [Make {_p} execute command "khcl hats zombie"]
-		format slot 31 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-skeleton}%"",Properties:{textures:[{Value:""%{_va-skeleton}%""}]}}}" named "&6%{_nome-skeleton}%" with lore "" to run [Make {_p} execute command "khcl hats skeleton"]
-		format slot 32 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-slime}%"",Properties:{textures:[{Value:""%{_va-slime}%""}]}}}" named "&6%{_nome-slime}%" with lore "" to run [Make {_p} execute command "khcl hats slime"]
-		format slot 33 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-blaze}%"",Properties:{textures:[{Value:""%{_va-blaze}%""}]}}}" named "&6%{_nome-blaze}%" with lore "" to run [Make {_p} execute command "khcl hats blaze"]
-		format slot 34 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-ghast}%"",Properties:{textures:[{Value:""%{_va-ghast}%""}]}}}" named "&6%{_nome-ghast}%" with lore "" to run [Make {_p} execute command "khcl hats ghast"]
-		format slot 26 of {_p} with arrow named "&bPágina 2" to run [Make {_p} execute command "khcl hats2"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear hats"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "hats2":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Chapéus 2/3")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "basketball" and "soccerball" and "alex" and "alex-teacher" and "alex-baker" and "alex-natal" and "alex-witch" and "silverfish" and "endermite" and "bat" and "wolf" and "squid" and "cave-spider" and "witch" and "zombie-pigman" and "enderman" and "villager" and "iron-golem" and "magma-cube" and "drowned" and "guardian":
-			set {_nome-%loop-value%} to yml value "hats.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/hats.yml"
-			set {_own-%loop-value%} to yml value "hats.%loop-value%.owner-id" from file "plugins/KhCollectibles/collectibles/hats.yml"
-			set {_va-%loop-value%} to yml value "hats.%loop-value%.value" from file "plugins/KhCollectibles/collectibles/hats.yml"
-		format slot 10 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-guardian}%"",Properties:{textures:[{Value:""%{_va-guardian}%""}]}}}" named "&6%{_nome-guardian}%" with lore "" to run [Make {_p} execute command "khcl hats guardian"]
-		format slot 11 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-drowned}%"",Properties:{textures:[{Value:""%{_va-drowned}%""}]}}}" named "&6%{_nome-drowned}%" with lore "" to run [Make {_p} execute command "khcl hats drowned"]
-		format slot 12 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-magma-cube}%"",Properties:{textures:[{Value:""%{_va-magma-cube}%""}]}}}" named "&6%{_nome-magma-cube}%" with lore "" to run [Make {_p} execute command "khcl hats magma-cube"]
-		format slot 13 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-iron-golem}%"",Properties:{textures:[{Value:""%{_va-iron-golem}%""}]}}}" named "&6%{_nome-iron-golem}%" with lore "" to run [Make {_p} execute command "khcl hats iron-golem"]
-		format slot 14 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-villager}%"",Properties:{textures:[{Value:""%{_va-villager}%""}]}}}" named "&6%{_nome-villager}%" with lore "" to run [Make {_p} execute command "khcl hats villager"]
-		format slot 15 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-enderman}%"",Properties:{textures:[{Value:""%{_va-enderman}%""}]}}}" named "&6%{_nome-enderman}%" with lore "" to run [Make {_p} execute command "khcl hats enderman"]
-		format slot 16 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-zombie-pigman}%"",Properties:{textures:[{Value:""%{_va-zombie-pigman}%""}]}}}" named "&6%{_nome-zombie-pigman}%" with lore "" to run [Make {_p} execute command "khcl hats zombie-pigman"]
-		format slot 19 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-witch}%"",Properties:{textures:[{Value:""%{_va-witch}%""}]}}}" named "&6%{_nome-witch}%" with lore "" to run [Make {_p} execute command "khcl hats witch"]
-		format slot 20 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-cave-spider}%"",Properties:{textures:[{Value:""%{_va-cave-spider}%""}]}}}" named "&6%{_nome-cave-spider}%" with lore "" to run [Make {_p} execute command "khcl hats cave-spider"]
-		format slot 21 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-squid}%"",Properties:{textures:[{Value:""%{_va-squid}%""}]}}}" named "&6%{_nome-squid}%" with lore "" to run [Make {_p} execute command "khcl hats squid"]
-		format slot 22 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-wolf}%"",Properties:{textures:[{Value:""%{_va-wolf}%""}]}}}" named "&6%{_nome-wolf}%" with lore "" to run [Make {_p} execute command "khcl hats wolf"]
-		format slot 23 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-bat}%"",Properties:{textures:[{Value:""%{_va-bat}%""}]}}}" named "&6%{_nome-bat}%" with lore "" to run [Make {_p} execute command "khcl hats bat"]
-		format slot 24 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-endermite}%"",Properties:{textures:[{Value:""%{_va-endermite}%""}]}}}" named "&6%{_nome-endermite}%" with lore "" to run [Make {_p} execute command "khcl hats endermite"]
-		format slot 25 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-silverfish}%"",Properties:{textures:[{Value:""%{_va-silverfish}%""}]}}}" named "&6%{_nome-silverfish}%" with lore "" to run [Make {_p} execute command "khcl hats silverfish"]
-		format slot 28 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-alex-witch}%"",Properties:{textures:[{Value:""%{_va-alex-witch}%""}]}}}" named "&6%{_nome-alex-witch}%" with lore "" to run [Make {_p} execute command "khcl hats alex-witch"]
-		format slot 29 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-alex-natal}%"",Properties:{textures:[{Value:""%{_va-alex-natal}%""}]}}}" named "&6%{_nome-alex-natal}%" with lore "" to run [Make {_p} execute command "khcl hats alex-natal"]
-		format slot 30 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-alex-baker}%"",Properties:{textures:[{Value:""%{_va-alex-baker}%""}]}}}" named "&6%{_nome-alex-baker}%" with lore "" to run [Make {_p} execute command "khcl hats alex-baker"]
-		format slot 31 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-alex-teacher}%"",Properties:{textures:[{Value:""%{_va-alex-teacher}%""}]}}}" named "&6%{_nome-alex-teacher}%" with lore "" to run [Make {_p} execute command "khcl hats alex-teacher"]
-		format slot 32 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-alex}%"",Properties:{textures:[{Value:""%{_va-alex}%""}]}}}" named "&6%{_nome-alex}%" with lore "" to run [Make {_p} execute command "khcl hats alex"]
-		format slot 33 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-soccerball}%"",Properties:{textures:[{Value:""%{_va-soccerball}%""}]}}}" named "&6%{_nome-soccerball}%" with lore "" to run [Make {_p} execute command "khcl hats soccerball"]
-		format slot 34 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-basketball}%"",Properties:{textures:[{Value:""%{_va-basketball}%""}]}}}" named "&6%{_nome-basketball}%" with lore "" to run [Make {_p} execute command "khcl hats basketball"]
-		format slot 18 of {_p} with arrow named "&bPágina 1" to run [Make {_p} execute command "khcl hats"]
-		format slot 26 of {_p} with arrow named "&bPágina 3" to run [Make {_p} execute command "khcl hats3"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear hats"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "hats3":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Chapéus 3/3")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "mario" and "luigi" and "goku" and "pokeball" and "beach-ball" and "dragon-ball":
-			set {_nome-%loop-value%} to yml value "hats.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/hats.yml"
-			set {_own-%loop-value%} to yml value "hats.%loop-value%.owner-id" from file "plugins/KhCollectibles/collectibles/hats.yml"
-			set {_va-%loop-value%} to yml value "hats.%loop-value%.value" from file "plugins/KhCollectibles/collectibles/hats.yml"
-		format slot 10 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-beach-ball}%"",Properties:{textures:[{Value:""%{_va-beach-ball}%""}]}}}" named "&6%{_nome-beach-ball}%" with lore "" to run [Make {_p} execute command "khcl hats beach-ball"]
-		format slot 11 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-dragon-ball}%"",Properties:{textures:[{Value:""%{_va-dragon-ball}%""}]}}}" named "&6%{_nome-dragon-ball}%" with lore "" to run [Make {_p} execute command "khcl hats dragon-ball"]
-		format slot 12 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-pokeball}%"",Properties:{textures:[{Value:""%{_va-pokeball}%""}]}}}" named "&6%{_nome-pokeball}%" with lore "" to run [Make {_p} execute command "khcl hats pokeball"]
-		format slot 13 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-goku}%"",Properties:{textures:[{Value:""%{_va-goku}%""}]}}}" named "&6%{_nome-goku}%" with lore "" to run [Make {_p} execute command "khcl hats goku"]
-		format slot 14 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-luigi}%"",Properties:{textures:[{Value:""%{_va-luigi}%""}]}}}" named "&6%{_nome-luigi}%" with lore "" to run [Make {_p} execute command "khcl hats luigi"]
-		format slot 15 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-mario}%"",Properties:{textures:[{Value:""%{_va-mario}%""}]}}}" named "&6%{_nome-mario}%" with lore "" to run [Make {_p} execute command "khcl hats mario"]
-		format slot 18 of {_p} with arrow named "&bPágina 2" to run [Make {_p} execute command "khcl hats2"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear hats"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "particles":
-		wait 3 ticks
-		khcore_makeGui({_p}, 4, "Partículas 1/1")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "portal" and "happyvillager" and "angryvillager" and "lavadrip" and "waterdrip" and "note":
-			set {_nome-%loop-value%} to yml value "particles.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/particles.yml"
-		format slot 10 of {_p} with water bucket named "&6%{_nome-waterdrip}%" with lore "" to run [Make {_p} execute command "khcl particles waterdrip"]
-		format slot 11 of {_p} with lava bucket named "&6%{_nome-lavadrip}%" with lore "" to run [Make {_p} execute command "khcl particles lavadrip"]
-		format slot 12 of {_p} with note block named "&6%{_nome-note}%" with lore "" to run [Make {_p} execute command "khcl particles note"]
-		format slot 13 of {_p} with blaze rod named "&6%{_nome-angryvillager}%" with lore "" to run [Make {_p} execute command "khcl particles angryvillager"]
-		format slot 14 of {_p} with emerald named "&6%{_nome-happyvillager}%" with lore "" to run [Make {_p} execute command "khcl particles happyvillager"]
-		format slot 15 of {_p} with obsidian named "&6%{_nome-portal}%" with lore "" to run [Make {_p} execute command "khcl particles portal"]
-		format slot 30 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear particles"]
-		format slot 32 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
-	{_type} == "animatedhats":
-		wait 3 ticks
-		khcore_makeGui({_p}, 6, "Chapéus Animados 1/1")
-		khcore_playSound({_p}, CLICK, 0.5, 15.0)
-		wait 2 ticks
-		loop "sleepy" and "cool" and "dizzy" and "rip" and "tan" and "goofy" and "blush" and "grin" and "cheeky" and "wink" and "spicy" and "relax" and "smile" and "surprised" and "rage" and "cry" and "lovey" and "love-struck":
-			set {_nome-%loop-value%} to yml value "animatedhats.%loop-value%.name" from file "plugins/KhCollectibles/collectibles/animatedhats.yml"
-			set {_own-%loop-value%} to yml value "animatedhats.%loop-value%.owner-id" from file "plugins/KhCollectibles/collectibles/animatedhats.yml"
-			set {_va-%loop-value%} to yml value "animatedhats.%loop-value%.value" from file "plugins/KhCollectibles/collectibles/animatedhats.yml"
-		format slot 10 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-lovey}%"",Properties:{textures:[{Value:""%{_va-lovey}%""}]}}}" named "&6%{_nome-lovey}%" with lore "" to run [Make {_p} execute command "khcl animatedhats lovey"]
-		format slot 11 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-love-struck}%"",Properties:{textures:[{Value:""%{_va-love-struck}%""}]}}}" named "&6%{_nome-love-struck}%" with lore "" to run [Make {_p} execute command "khcl animatedhats love-struck"]
-		format slot 12 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-cry}%"",Properties:{textures:[{Value:""%{_va-cry}%""}]}}}" named "&6%{_nome-cry}%" with lore "" to run [Make {_p} execute command "khcl animatedhats cry"]
-		format slot 13 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-rage}%"",Properties:{textures:[{Value:""%{_va-rage}%""}]}}}" named "&6%{_nome-rage}%" with lore "" to run [Make {_p} execute command "khcl animatedhats rage"]
-		format slot 14 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-surprised}%"",Properties:{textures:[{Value:""%{_va-surprised}%""}]}}}" named "&6%{_nome-surprised}%" with lore "" to run [Make {_p} execute command "khcl animatedhats surprised"]
-		format slot 15 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-smile}%"",Properties:{textures:[{Value:""%{_va-smile}%""}]}}}" named "&6%{_nome-smile}%" with lore "" to run [Make {_p} execute command "khcl animatedhats smile"]
-		format slot 16 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-cool}%"",Properties:{textures:[{Value:""%{_va-cool}%""}]}}}" named "&6%{_nome-cool}%" with lore "" to run [Make {_p} execute command "khcl animatedhats cool"]
-		format slot 19 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-sleepy}%"",Properties:{textures:[{Value:""%{_va-sleepy}%""}]}}}" named "&6%{_nome-sleepy}%" with lore "" to run [Make {_p} execute command "khcl animatedhats sleepy"]
-		format slot 20 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-relax}%"",Properties:{textures:[{Value:""%{_va-relax}%""}]}}}" named "&6%{_nome-relax}%" with lore "" to run [Make {_p} execute command "khcl animatedhats relax"]
-		format slot 21 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-spicy}%"",Properties:{textures:[{Value:""%{_va-spicy}%""}]}}}" named "&6%{_nome-spicy}%" with lore "" to run [Make {_p} execute command "khcl animatedhats spicy"]
-		format slot 22 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-wink}%"",Properties:{textures:[{Value:""%{_va-wink}%""}]}}}" named "&6%{_nome-wink}%" with lore "" to run [Make {_p} execute command "khcl animatedhats wink"]
-		format slot 23 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-cheeky}%"",Properties:{textures:[{Value:""%{_va-cheeky}%""}]}}}" named "&6%{_nome-cheeky}%" with lore "" to run [Make {_p} execute command "khcl animatedhats cheeky"]
-		format slot 24 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-grin}%"",Properties:{textures:[{Value:""%{_va-grin}%""}]}}}" named "&6%{_nome-grin}%" with lore "" to run [Make {_p} execute command "khcl animatedhats grin"]
-		format slot 25 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-blush}%"",Properties:{textures:[{Value:""%{_va-blush}%""}]}}}" named "&6%{_nome-blush}%" with lore "" to run [Make {_p} execute command "khcl animatedhats blush"]
-		format slot 28 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-goofy}%"",Properties:{textures:[{Value:""%{_va-goofy}%""}]}}}" named "&6%{_nome-goofy}%" with lore "" to run [Make {_p} execute command "khcl animatedhats goofy"]
-		format slot 29 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-tan}%"",Properties:{textures:[{Value:""%{_va-tan}%""}]}}}" named "&6%{_nome-tan}%" with lore "" to run [Make {_p} execute command "khcl animatedhats tan"]
-		format slot 30 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-rip}%"",Properties:{textures:[{Value:""%{_va-rip}%""}]}}}" named "&6%{_nome-rip}%" with lore "" to run [Make {_p} execute command "khcl animatedhats rip"]
-		format slot 31 of {_p} with player head with custom nbt "{SkullOwner:{Id:""%{_own-dizzy}%"",Properties:{textures:[{Value:""%{_va-dizzy}%""}]}}}" named "&6%{_nome-dizzy}%" with lore "" to run [Make {_p} execute command "khcl animatedhats dizzy"]
-		format slot 48 of {_p} with barrier named "&cRemover" to close then run [Make {_p} execute command "khcl clear animatedhats"]
-		format slot 50 of {_p} with rose red named "&bVoltar" to run [Make {_p} execute command "khcl main"]
+				replace "%{_loop}%." with "" in {_selected}
+				set {_selected} to yaml value "%loop-value%.%{_selected}%.name" from "ks.cs.cosmetics/%loop-value%"
+			set {_percent} to (100/{_max})*{_contains}
+			set {_percent} to "%{_percent}%"
+			set {_percent} to first element of {_percent} split at "." parsed as int
+			{_percent} >= 40:
+				set {_color} to "&6"
+			{_percent} = 100:
+				set {_color} to "&a"
+			set {_icon} to replacer "{list}" with {_selectesa} in yaml value "%{_type}%.items.%{_loop}%.icon" from "ks.cs.cosmetics/main"
+		{_loop} = "clothes":
+			loop "helmet" and "chestplate" and "leggings" and "boots":
+				yaml value "%uuid of {_p}%.clothes.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" is not "":
+					set {_lo} to yaml value "%uuid of {_p}%.clothes.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+					set {_lo} to first element of {_lo} split at " "
+					set {_base} to yaml value "menu.replaces.name_item" from "ks.cs.cosmetics/clothes"
+					replace "{item}" with yaml value "clothes.%last element of {_lo} split at ""_""%.%first element of {_lo} split at ""_""%.name" from "ks.cs.cosmetics/clothes" in {_base}
+					replace "{piece}" with yaml value "clothes.%loop-value-2%.name" from "ks.cs.cosmetics/clothes" in {_base}
+					add replacer "{part}" with "%{_base}%" in yaml value "menu.items.clothes.replaces.format" from "ks.cs.cosmetics/main" to {_selectesa::*}
+			set {_selectesa} to replacer " and " and ", " with "\n" and "\n" in "%{_selectesa::*}%"
+			size of {_selectesa::*} = 0:
+				set {_selectesa} to yaml value "menu.items.clothes.replaces.none" from "ks.cs.cosmetics/main"
+			set {_status} to yaml value "menu.items.clothes.replaces.permission" from "ks.cs.cosmetics/main"
+			{_p} has permission "khcs.wardrobe" or "khcs.*":
+				set {_status} to replacer "{list}" with {_selectesa} in yaml value "menu.items.clothes.replaces.view" from "ks.cs.cosmetics/main"
+			set {_icon} to replacer "{status}" with {_status} in yaml value "menu.items.%{_loop}%.icon" from "ks.cs.cosmetics/main"
+		
+		{_loop} = "particles" or "cloaks" or "hats" or "animated_hats" or "banners" or "pets":
+			set {_icon} to replacer "{max}" and "{have}" and "{color}" and "{percent}" and "{selected}" with "%{_max}%" and "%{_contains}%" and {_color} and "%{_percent}%" and {_selected} in {_icon}
+		
+		make a gui slot yaml value "%{_type}%.items.%{_loop}%.slot" from "ks.cs.cosmetics/main" of {_p} with deserializeItem({_icon}, {_p}) to run:
+			{_loop} != "clothes" or "particles" or "cloaks" or "hats" or "animated_hats" or "banners" or "pets":
+				{_loop} = "back":
+					main_chest({_p})
+				{_loop} = "heads" or "allpets":
+					main_chest({_p}, "menu.%{_loop}%")
+				stop
+			{_loop} = "clothes":
+				{_p} has permission "khcs.wardrobe" or "khcs.*":
+					clothes_chest({_p})
+			else:
+				listing_chest({_p}, {_loop})
+function listing_chest(p: Player, var: text, mode: text="", page: number = 0):
+	set {_pageStart} to 21*{_page}
+	set {_list::*} to yaml nodes with keys "%{_var}%" from "ks.cs.cosmetics/%{_var}%"
+	{_mode} != "":
+		set {_list::*} to yaml nodes with keys "%{_var}%.%{_mode}%.packages" from "ks.cs.cosmetics/%{_var}%"
+	set {_i} to 1
+	set {_rows} to 4
+	set {_slot} to 10
+	size of {_list::*} is between 8 and 14:
+		set {_rows} to 5
+	size of {_list::*} > 14:
+		set {_rows} to 6
+	open chest inventory with {_rows} rows named yaml value "menu.title" from "ks.cs.cosmetics/%{_var}%" to {_p}
+	wait a tick
+	yaml value "%uuid of {_p}%.selected.%{_var}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" != "":
+		make a gui slot 9*{_rows}-6 of {_p} with deserializeItem(yaml value "menu.items.remove" from "ks.cs.cosmetics/%{_var}%", {_p}) to run:
+			set yaml value "%uuid of {_p}%.selected.%{_var}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+			kcs_update({_p})
+			listing_chest({_p}, {_var}, "", {_page})
+	make a gui slot 9*{_rows}-5 of {_p} with deserializeItem(yaml value "options.pagged.back" from "ks.cs.language", {_p}) to run:
+		{_mode} != "":
+			listing_chest({_p}, {_var}, "", {_page})
+		else:
+			{_var} = "animated_hats" or "hats" or "banners":
+				main_chest({_p}, "menu.heads")
+				stop
+			{_var} = "pets":
+				main_chest({_p}, "menu.allpets")
+				stop
+			main_chest({_p})
 
-# ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── #
-# load
-on load:
-	khcollects_filemanager("create")
-	wait 1 second
-	file "plugins/Skript/scripts/KhCore.sk" exists:
-		send "&3[KHCOLLECTS] &aKhCore was found successfully" to console
-	else:
-		send "&3[KHCOLLECTS] &cKhCore was not found successfully" to console
+	(amount of {_list::*}) > {_pageStart} + 21:
+		make a gui slot 9*{_rows}-1 of {_p} with deserializeItem(replacer "{next_page}" with "%{_page}+1+1%" in yaml value "options.pagged.next_page" from "ks.cs.language", {_p}) to run:
+			listing_chest({_p}, {_var}, {_mode}, ({_page} + 1))
+	{_page} > 0:
+		make a gui slot 9*{_rows}-9 of {_p} with deserializeItem(replacer "{previous_page}" with "%{_page}+1-1%" in yaml value "options.pagged.previous_page" from "ks.cs.language", {_p}) to run:
+			listing_chest({_p}, {_var}, {_mode}, ({_page} - 1))
+
+	loop {_list::*}:
+		(loop-index parsed as integer) > {_pageStart}
+		set {_loop} to loop-value
+
+		set {_ip} to "%{_var}%.%{_loop}%"
+		{_mode} != "":
+			set {_ip} to "%{_var}%.%{_mode}%.packages.%{_loop}%"
+
+		set {_keys::*} to yaml nodes with keys "%{_ip}%" from "ks.cs.cosmetics/%{_var}%"
+		{_keys::*} contains "packages":
+			set {_icon} to yaml value "%{_ip}%.icon" from "ks.cs.cosmetics/%{_var}%"
+			set {_name} to yaml value "%{_ip}%.name" from "ks.cs.cosmetics/%{_var}%"
+			set {_lore} to replacer "{name}" with {_name} in yaml value "menu.replaces.packages" from "ks.cs.cosmetics/%{_var}%"
+			set {_size} to size of yaml nodes with keys "%{_ip}%.packages" from "ks.cs.cosmetics/%{_var}%"
+			
+			clear {_xe::*}
+			set {_xe} to 1
+			loop yaml nodes with keys "%{_ip}%.packages" from "ks.cs.cosmetics/%{_var}%":
+				{_xe} <= 7:
+					set {_q} to yaml value "%{_ip}%.packages.%loop-value-2%.name" from "ks.cs.cosmetics/%{_var}%"
+					add " &f▪ %{_q}%" to {_xe::*}
+					add 1 to {_xe}
+
+			make a gui slot {_slot} of {_p} with deserializeItem(replacer "{size}" and "{list}" with "%{_size}%" and replacer ", " and "and " with "\n" and "\n" in "%{_xe::*}%" in "%{_icon}% : nome>&a%{_name}% : desc>%{_lore}%", {_p}) without nbt to run:
+				listing_chest({_p}, {_var}, {_loop})
+
+		else:
+			set {_icon} to yaml value "%{_ip}%.icon" from "ks.cs.cosmetics/%{_var}%"
+			set {_name} to yaml value "%{_ip}%.name" from "ks.cs.cosmetics/%{_var}%"
+			set {_lore} to replacer "{name}" with {_name} in yaml value "menu.replaces.lore" from "ks.cs.cosmetics/%{_var}%"
+			set {_cos} to yaml value "%uuid of {_p}%.selected.%{_var}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+			set {_status} to yaml value "menu.replaces.not" from "ks.cs.cosmetics/%{_var}%"
+			replace "%{_var}%.%{_mode}%.packages." with "" in {_cos}
+			set {_x::*} to "hats" and "animated_hats" and "banners"
+			remove "%{_var}%" from {_x::*}
+			set {_color} to "&c"
+			
+			loop yaml list "%uuid of {_p}%.cosmetics.%{_var}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml":
+				set {_12} to replacer "%{_ip}%" with "%{_loop}%" in "%loop-value-2%"
+				{_12} is {_loop}:
+					set {_status} to yaml value "menu.replaces.select" from "ks.cs.cosmetics/%{_var}%"
+					set {_color} to "&a"
+
+			{_cos} is {_loop}:
+				set {_status} to yaml value "menu.replaces.selected" from "ks.cs.cosmetics/%{_var}%"
+				set {_color} to "&6"
+			{_color} = "&c":
+				set {_icon} to "351:8"
+
+			make a gui slot {_slot} of {_p} with deserializeItem(replacer "{status}" with {_status} in "%{_icon}% : nome>%{_color}%%{_name}% : desc>%{_lore}%", {_p}) without nbt to run:
+				{_color} is "&a":
+					set yaml value "%uuid of {_p}%.selected.%{_var}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to {_loop}
+					{_mode} != "":
+						set yaml value "%uuid of {_p}%.selected.%{_var}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to {_ip}
+					loop {_x::*}:
+						{_var} = "hats" or "animated_hats" or "banners"
+						yaml value "%uuid of {_p}%.selected.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" is not "":
+							set yaml value "%uuid of {_p}%.selected.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+					set yaml value "%uuid of {_p}%.clothes.helmet" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+					kcs_update({_p})
+					listing_chest({_p}, {_var}, {_mode}, {_page})
+					#send "&a[Colecionáveis] &aVocê equipou o cosmético &fApaixonado&a." to {_p}
+
+		add 1 to {_slot}
+		{_slot} is 17 or 26:
+			add 2 to {_slot}
+		{_slot} = ((35*{_i})):
+			exit loop
+function clothes_chest(p: Player, selected: text="helmet"):
+	open chest inventory with 6 rows named yaml value "menu.title" from "ks.cs.cosmetics/clothes" to {_p}
+	wait a tick
+	set {_%{_selected}%-slot} to yaml value "clothes.%{_selected}%.slot" from "ks.cs.cosmetics/clothes"
+	set {_%{_selected}%-slot} to {_%{_selected}%-slot} parsed as number
+	set {_%{_selected}%-%{_p}%} to yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+
+	make a gui slot 49 of {_p} with deserializeItem(yaml value "options.pagged.back" from "ks.cs.language", {_p}) to run:
+		main_chest({_p})
+	make a gui slot {_%{_selected}%-slot}-1 of {_p} with deserializeItem(replacer "{piece}" with yaml value "clothes.%{_selected}%.name" from "ks.cs.cosmetics/clothes" in yaml value "menu.items.selected_piece.icon" from "ks.cs.cosmetics/clothes", {_p})
+	
+	{_%{_selected}%-%{_p}%} is not "":
+		make a gui slot 16 of {_p} with deserializeItem(yaml value "menu.items.remove.icon" from "ks.cs.cosmetics/clothes", {_p}) to run:
+			set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+			clothes_chest({_p}, "%{_selected}%")
+			kcs_update({_p})
+		{_%{_selected}%-%{_p}%} contains "leather":
+			make a gui slot 34 of {_p} with deserializeItem(yaml value "menu.items.paint.icon" from "ks.cs.cosmetics/clothes", {_p}) to run:
+				paint_chest({_p}, "%{_selected}%")
+		make a gui slot 25 of {_p} with deserializeItem(yaml value "menu.items.shiny.icon" from "ks.cs.cosmetics/clothes", {_p}) to run:
+			{_%{_selected}%-%{_p}%} contains "encantar>":
+				set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to replacer " : encantar>sharpness:1" with "" in {_%{_selected}%-%{_p}%}
+			else:
+				set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to "%{_%{_selected}%-%{_p}%}% : encantar>sharpness:1"
+			clothes_chest({_p}, "%{_selected}%")
+		kcs_update({_p})
+
+	loop "helmet" and "chestplate" and "leggings" and "boots":
+		set {_%loop-value%-%{_p}%} to yaml value "%uuid of {_p}%.clothes.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+		set {_%loop-value%-name} to yaml value "clothes.%loop-value%.name" from "ks.cs.cosmetics/clothes"
+	set {_slot} to 12
+	loop "helmet" and "chestplate" and "leggings" and "boots":
+		{_selected} is loop-value:
+			set {_item} to "%{_%{_selected}%-%{_p}%}% : nome>&a%{_%{_selected}%-name}%"
+			{_%{_selected}%-%{_p}%} is "":
+				set {_item} to "160:15 : nome>&a%{_%loop-value%-name}%"
+			make a gui slot {_%{_selected}%-slot} of {_p} with deserializeItem({_item}, {_p}) without nbt
+		else:
+			set {_run} to loop-value
+			set {_item} to "%{_%loop-value%-%{_p}%}% : nome>&c%{_%loop-value%-name}%"
+			{_%loop-value%-%{_p}%} is "":
+				set {_item} to "160:15 : nome>&c%{_%loop-value%-name}%"
+			make a gui slot yaml value "clothes.%loop-value%.slot" from "ks.cs.cosmetics/clothes" of {_p} with deserializeItem({_item}, {_p}) without nbt to run:
+				clothes_chest({_p}, {_run})
+	loop yaml nodes with keys "clothes.%{_selected}%" from "ks.cs.cosmetics/clothes":
+		loop-value is not "name" or "slot"
+		set {_base} to yaml value "menu.replaces.name_item" from "ks.cs.cosmetics/clothes"
+		replace "{item}" with yaml value "clothes.%{_selected}%.%loop-value%.name" from "ks.cs.cosmetics/clothes" in {_base}
+		replace "{piece}" with "%{_%{_selected}%-name}%" in {_base}
+		{_%{_selected}%-%{_p}%} contains "%loop-value%_%{_selected}%":
+			set {_item} to replacer "{x}" with yaml value "menu.replaces.unselect" from "ks.cs.cosmetics/clothes" in "%loop-value%_%{_selected}% : nome>&6%{_base}% : desc>{x}"
+			make a gui slot {_slot} of {_p} with deserializeItem({_item}, {_p}) without nbt to run:
+				set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+				clothes_chest({_p}, "%{_selected}%")
+				kcs_update({_p})
+		else:
+			set {_item} to replacer "{x}" with yaml value "menu.replaces.select" from "ks.cs.cosmetics/clothes" in "%loop-value%_%{_selected}% : nome>&a%{_base}% : desc>{x}"
+			make a gui slot {_slot} of {_p} with deserializeItem({_item}, {_p}) without nbt to run:
+				set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to first element of {_item} split at " : "
+				first element of {_item} split at " : " contains "helmet":
+					loop "hats" and "animated_hats" and "banners":
+						set yaml value "%uuid of {_p}%.selected.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+				clothes_chest({_p}, "%{_selected}%")
+				kcs_update({_p})
+		add 1 to {_slot}
+		{_slot} is 15:
+			add 6 to {_slot}
+function paint_chest(p: Player, selected: text="helmet"):
+	open chest inventory with 6 rows named yaml value "paint.title" from "ks.cs.cosmetics/clothes" to {_p}
+	wait a tick
+	set {_slot} to 10
+
+	set {_item} to yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+	make a gui slot 49 of {_p} with deserializeItem(yaml value "options.pagged.back" from "ks.cs.language", {_p}) to run:
+		clothes_chest({_p}, {_selected})
+	make a gui slot 48 of {_p} with deserializeItem(replacer "{item}" with {_item} in yaml value "paint.items.current_piece.icon" from "ks.cs.cosmetics/clothes", {_p}) without nbt
+	
+	loop yaml nodes with keys "paint.colors" from "ks.cs.cosmetics/clothes":
+		set {_loop} to loop-value
+		set {_name} to yaml value "paint.colors.%{_loop}%.name" from "ks.cs.cosmetics/clothes"
+		set {_icon} to replacer "{color}" and "{item}" and "{name}" with replacer "_" with " " in {_loop} and {_item} and {_name} in yaml value "paint.icons" from "ks.cs.cosmetics/clothes"
+		make a gui slot {_slot} of {_p} with deserializeItem({_icon}, {_p}) without nbt to run:
+			set {_split::*} to {_item} split at " : "
+			loop {_split::*}:
+				loop-value-2 contains "encantar":
+					set {_en} to loop-value-2
+					set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to "%{_split::1}% : %loop-value-2% : pintar>%{_loop}%"
+					exit loop
+				else:
+					set {_x} to first element of {_item} split at " : "
+					set yaml value "%uuid of {_p}%.clothes.%{_selected}%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to "%{_x}% : pintar>%{_loop}%"
+			paint_chest({_p}, {_selected})
+			kcs_update({_p})
+		add 1 to {_slot}
+		{_slot} is 17 or 26:
+			add 2 to {_slot}
+
+function kcs_stats(p: Player):
+	fileExists("plugins/KhCosmetics/players/%uuid of {_p}%.yml") is not true:
+		create file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+	set yaml value "%uuid of {_p}%.name" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to {_p}'s displayname
+	set yaml value "%uuid of {_p}%.pet_name" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to khcore_text({_p}, yaml value "options.pets.default_name" from "ks.cs.language")
+	loop "selected.banners" and "selected.hats" and "selected.animated_hats" and "selected.pets"  and "selected.cloaks" and "selected.particles" and "clothes.helmet" and "clothes.chestplate" and "clothes.leggings" and "clothes.boots":
+		yaml value "%uuid of {_p}%.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" is not set:
+			set yaml value "%uuid of {_p}%.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" to ""
+	loop "cosmetics.banners" and "cosmetics.hats" and "cosmetics.animated_hats" and "cosmetics.pets"  and "cosmetics.cloaks" and "cosmetics.particles":
+		add "x" to yaml list "%uuid of {_p}%.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+		remove "x" from yaml list "%uuid of {_p}%.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+function apply_emote(p: Player, x: text):
+	emote "%{_x}%" parsed as emotetype on {_p} repeating 1000 times
+function kcs_petName(p: Player) :: text:
+	set {_x} to yaml value "%uuid of {_p}%.pet_name" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+	return "%{_x}%"
+function kcs_loadPerms(p: Player):
+	loop "hats" and "animated_hats" and "banners" and "particles" and "pets" and "cloaks":
+		loop yaml list "%uuid of {_p}%.cosmetics.%loop-value%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml":
+			remove loop-value-2 from yaml list "%uuid of {_p}%.cosmetics.%loop-value-1%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+		loop yaml nodes with keys "%loop-value-1%" from "ks.cs.cosmetics/%loop-value-1%":
+			set {_x::*} to yaml nodes with keys "%loop-value-1%.%loop-value-2%" from "ks.cs.cosmetics/%loop-value-1%"
+			{_x::*} contains "packages":
+				loop yaml nodes with keys "%loop-value-1%.%loop-value-2%.packages" from "ks.cs.cosmetics/%loop-value-1%":
+					{_p} has permission "khcs.*" or "khcs.%loop-value-1%.*" or "khcs.%loop-value-1%.%loop-value-2%.*" or "khcs.%loop-value-1%.%loop-value-2%.%loop-value-3%":
+						add "%loop-value-1%.%loop-value-2%.packages.%loop-value-3%" to yaml list "%uuid of {_p}%.cosmetics.%loop-value-1%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+			else:
+				{_p} has permission "khcs.*" or "khcs.%loop-value-1%.*" or "khcs.%loop-value-1%.%loop-value-2%":
+					add loop-value-2 to yaml list "%uuid of {_p}%.cosmetics.%loop-value-1%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+
+function kcs_update(p: Player, x: boolean=false):
+	stop emote {_p}
+	stopEffect id "khcs::cloaks::%{_p}%"
+	stopEffect id "khcs::players::%{_p}%"
+	set {_p}'s helmet to air
+	set {_p}'s chestplate to air
+	set {_p}'s leggings to air
+	set {_p}'s boots to air
+	loop all entities:
+		name of loop-entity is kcs_petName({_p}):
+			kill loop-entity
+	loop yaml list "options.worlds" from "ks.cs.language":
+		loop-value = "%{_p}'s world%":
+			set slot yaml value "options.item.slot" from "ks.cs.language" of {_p} to deserializeItem(yaml value "options.item.icon" from "ks.cs.language", {_p})
+			loop "banners" and "hats":
+				yaml value "%uuid of {_p}%.selected.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" != "":
+					set {_x} to yaml value "%uuid of {_p}%.selected.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+					replace "%loop-value-2%." with "" in {_x}
+					set {_icon} to yaml value "%loop-value-2%.%{_x}%.icon" from "ks.cs.cosmetics/%loop-value-2%"
+					set {_name} to yaml value "%loop-value-2%.%{_x}%.name" from "ks.cs.cosmetics/%loop-value-2%"
+					set {_p}'s helmet to unbreakable deserializeItem("%{_icon}% : nome>&a%{_name}%", {_p}) without nbt
+			loop "helmet" and "chestplate" and "leggings" and "boots":
+				set {_item} to yaml value "%uuid of {_p}%.clothes.%loop-value-2%" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+				{_item} is not "":
+					set {_name} to first element of {_item} split at "_"
+					set {_base} to yaml value "menu.replaces.name_item" from "ks.cs.cosmetics/clothes"
+					replace "{item}" with yaml value "clothes.%loop-value-2%.%{_name}%.name" from "ks.cs.cosmetics/clothes" in {_base}
+					replace "{piece}" with yaml value "clothes.%loop-value-2%.name" from "ks.cs.cosmetics/clothes" in {_base}
+					equip {_p} with unbreakable deserializeItem("%{_item}% : nome>&a%{_base}%", {_p}) without nbt
+			set {_x} to yaml value "%uuid of {_p}%.selected.particles" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+			{_x} != "":
+				drawSimpleHalo particle "%{_x}%", center {_p}, id "khcs::players::%{_p}%", rainbowMode false, visibleRange 32
+			yaml value "%uuid of {_p}%.selected.animated_hats" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml" != "":
+				set {_x} to yaml value "%uuid of {_p}%.selected.animated_hats" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+				{_x} contains "custom_":
+					custom emote replacer "custom_" with "" in "%{_x}%" on {_p} repeating 1000 times
+				else:
+					apply_emote({_p}, {_x})
+			set {_x} to yaml value "%uuid of {_p}%.selected.pets" from file "plugins/KhCosmetics/players/%uuid of {_p}%.yml"
+			{_x} != "":
+				spawn {_x} parsed as entitytype at {_p}
+				set the display name of the spawned entity to kcs_petName({_p})
+				while spawned entity is alive:
+					loop all entities:
+						name of loop-entity is kcs_petName({_p}):
+							distance between {_p} and loop-entity is less than 10:
+								distance between {_p} and loop-entity is bigger than 3:
+									make loop-entity pathfind to location of {_p} with speed 1.3
+								else if distance between {_p} and loop-entity is bigger than 10:
+									teleport loop-entity to position of {_p}
+								world of {_p} is not world of loop-entity:
+									teleport loop-entity to position of {_p}
+					wait 1 tick
+  
+#                     L  O  A  D                      #
+# ─────────────────────────────────────────────────── #
+load:
+	loop "language" and "cosmetics/main" and "cosmetics/pets"  and "cosmetics/cloaks" and "cosmetics/clothes" and "cosmetics/banners" and "cosmetics/hats" and "cosmetics/animated_hats" and "cosmetics/particles":
+		fileExists("plugins/KhCosmetics/%loop-value%.yml") != true:
+			create file "plugins/KhCosmetics/%loop-value%.yml"
+			delete file "plugins/KhCosmetics/%loop-value%.yml"
+			download from "https://raw.githubusercontent.com/KickHolse/KhCosmetics/main/files/en/%loop-value%" to file "plugins/KhCosmetics/%loop-value%.yml"
+		yaml "ks.cs.%loop-value%" is loaded:
+			unload yaml "ks.cs.%loop-value%"
+		load yaml "plugins/KhCosmetics/%loop-value%.yml" as "ks.cs.%loop-value%"
 	text from "https://api.spigotmc.org/legacy/update.php?resource=76731" != "{@version}":
-		set {khcl::check_update} to "true"
-		send "&3[KHCOLLECTS] &cYou are not using the latest version of skript" to console
-	else:
-		send "&3[KHCOLLECTS] &aYou are using the latest version of skript" to console
-	send "&3[KHCOLLECTS] &aKhCollectibles &8v{@version} &aenabled!" to console
+		send "[KhCosmetics] &cYou are not using the latest version of skript." to console
