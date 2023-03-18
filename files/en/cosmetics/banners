@@ -1,0 +1,306 @@
+menu:
+  title: 'Banners'
+  items:
+    remove: 'BARRIER : nome>&cRemove current banner.'
+  replaces:
+    lore: '&7Stroll through the lobby using the\n&7{name}&7 banner.\n\n{status}'
+    packages: '&7Stroll through the lobby using the\n&7{name}&7 category banner.\n\n&7Banners available ({size}):\n{list}\n\n&e➟ Click to browse.'
+    select: '&e➟ Click to select this banner.'
+    selected: '&6This banner is already selected.'
+    not: '&cYou don''t have this banner!'
+
+banners:
+  flags:
+    name: 'Flags of Countries'
+    icon: '425 : nbt>{BlockEntityTag:{Base:10,Patterns:[{Pattern:mr,Color:11},{Pattern:mr,Color:11},{Pattern:mc,Color:4},{Pattern:mc,Color:4}]}}'
+    packages:
+      brazil:
+        name: 'Brazil'
+        icon: '425 : nbt>{BlockEntityTag:{Base:10,Patterns:[{Pattern:mr,Color:11},{Pattern:mr,Color:11},{Pattern:mc,Color:4},{Pattern:mc,Color:4}]}}'
+      eua:
+        name: 'United States'
+        icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:tl,Color:4},{Pattern:ss,Color:9},{Pattern:tl,Color:4},{Pattern:tl,Color:4},{Pattern:ss,Color:1},{Pattern:ss,Color:1},{Pattern:tl,Color:4},{Pattern:tl,Color:4}]}}'
+      switzerland:
+        name: 'Switzerland'
+        icon: '425:1 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"sc"},{Color:15,Pattern:"sc"},{Color:1,Pattern:"bo"},{Color:1,Pattern:"ts"},{Color:1,Pattern:"bs"},{Color:1,Pattern:"bo"}]}}'
+      belgium:
+        name: 'Belgium'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"ls"},{Color:1,Pattern:"rs"},{Color:1,Pattern:"rs"},{Color:0,Pattern:"ls"},{Color:11,Pattern:"cs"}]}}'
+      france:
+        name: 'France'
+        icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:1,Pattern:"rs"},{Color:4,Pattern:"ls"},{Color:4,Pattern:"ls"},{Color:1,Pattern:"rs"}]}}'
+      palestine:
+        name: 'Palestine'
+        icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"rs"},{Color:2,Pattern:"ls"},{Color:2,Pattern:"ls"},{Color:0,Pattern:"rs"},{Color:1,Pattern:"tt"},{Color:1,Pattern:"tt"}]}}'
+      mexico:
+        name: 'Mexico'
+        icon: '425:2 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"cbo"},{Color:15,Pattern:"mr"},{Color:15,Pattern:"vhr"},{Color:3,Pattern:"mc"},{Color:2,Pattern:"ts"},{Color:1,Pattern:"bs"}]}}'
+      jamaica:
+        name: 'Jamaica'
+        icon: '425:2 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"bt"},{Color:0,Pattern:"tt"},{Color:11,Pattern:"cr"},{Color:11,Pattern:"cr"}]}}'
+      spanish:
+        name: 'Spanish'
+        icon: '425:1 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bri"},{Color:11,Pattern:"ss"},{Color:11,Pattern:"hhb"},{Color:11,Pattern:"ts"},{Color:1,Pattern:"ls"},{Color:1,Pattern:"rs"}]}}'
+      bolivia:
+        name: 'Bolivia'
+        icon: '425:11 : nbt>{BlockEntityTag:{Patterns:[{Color:1,Pattern:"mc"},{Color:12,Pattern:"ms"},{Color:11,Pattern:"rs"},{Color:11,Pattern:"ls"},{Color:1,Pattern:"rs"},{Color:2,Pattern:"ls"}]}}'
+  alphabet:
+    name: 'Alphabet'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:mr,Color:0},{Pattern:bt,Color:0},{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ms,Color:15},{Pattern:bo,Color:0}]}}'
+    packages:
+      a:
+        name: 'Letter A'
+        icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:mr,Color:0},{Pattern:bt,Color:0},{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ms,Color:15},{Pattern:bo,Color:0}]}}'
+      b:
+        name: 'Letter B'
+        icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:vh,Color:15},{Pattern:rs,Color:15},{Pattern:ts,Color:15},{Pattern:bs,Color:15},{Pattern:ms,Color:15},{Pattern:bo,Color:0}]}}'
+      c:
+        name: 'Letter C'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bs"},{Color:15,Pattern:"ts"},{Color:0,Pattern:"mr"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      d:
+        name: 'Letter D'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"rs"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"mc"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      e:
+        name: 'Letter E'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ms"},{Color:0,Pattern:"rs"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"bo"}]}}'
+      f:
+        name: 'Letter F'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ms"},{Color:0,Pattern:"rs"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:0,Pattern:"bo"}]}}'
+      g:
+        name: 'Letter G'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"rud"},{Color:0,Pattern:"hh"},{Color:15,Pattern:"bs"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:0,Pattern:"bo"}]}}'
+      h:
+        name: 'Letter H'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:15,Pattern:"ms"},{Color:15,Pattern:"rs"},{Color:0,Pattern:"bo"}]}}'
+      i:
+        name: 'Letter I'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"cs"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"bo"}]}}'
+      j:
+        name: 'Letter J'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:0,Pattern:"hh"},{Color:15,Pattern:"bs"},{Color:15,Pattern:"rs"},{Color:0,Pattern:"bo"}]}}'
+      k:
+        name: 'Letter K'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"drs"},{Color:0,Pattern:"ld"},{Color:15,Pattern:"dls"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      l:
+        name: 'Letter L'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bs"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      m:
+        name: 'Letter M'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"tt"},{Color:0,Pattern:"tts"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"rs"},{Color:0,Pattern:"bo"}]}}'
+      ene:
+        name: 'Letter N'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"rs"},{Color:15,Pattern:"drs"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      o:
+        name: 'Letter O'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"rs"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"bo"}]}}'
+      p:
+        name: 'Letter P'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"rs"},{Color:0,Pattern:"hhb"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"ms"},{Color:0,Pattern:"bo"}]}}'
+      q:
+        name: 'Letter Q'
+        icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"mr"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"rs"},{Color:15,Pattern:"br"},{Color:0,Pattern:"bo"}]}}'
+      r:
+        name: 'Letter R'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"hh"},{Color:0,Pattern:"mr"},{Color:15,Pattern:"drs"},{Color:15,Pattern:"ms"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      s:
+        name: 'Letter S'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ts"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"mr"},{Color:15,Pattern:"drs"},{Color:0,Pattern:"bo"},{Color:0,Pattern:"cbo"}]}}'
+      t:
+        name: 'Letter T'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ts"},{Color:15,Pattern:"cs"},{Color:0,Pattern:"bo"}]}}'
+      u:
+        name: 'Letter U'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:15,Pattern:"bs"},{Color:15,Pattern:"rs"},{Color:0,Pattern:"bo"}]}}'
+      v:
+        name: 'Letter V'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:0,Pattern:"bl"},{Color:15,Pattern:"dls"},{Color:0,Pattern:"bo"}]}}'
+      w:
+        name: 'Letter W'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bt"},{Color:0,Pattern:"bts"},{Color:15,Pattern:"rs"},{Color:15,Pattern:"ls"},{Color:0,Pattern:"bo"}]}}'
+      x:
+        name: 'Letter X'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"drs"},{Color:15,Pattern:"dls"},{Color:0,Pattern:"bo"}]}}'
+      ylon:
+        name: 'Letter Y'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:0,Pattern:"hhb"},{Color:15,Pattern:"rs"},{Color:15,Pattern:"ms"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"bo"}]}}'
+      z:
+        name: 'Letter Z'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bs"},{Color:15,Pattern:"dls"},{Color:15,Pattern:"ts"},{Color:0,Pattern:"bo"}]}}'
+  numbers:
+    name: 'Numbers'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ts,Color:15},{Pattern:bs,Color:15},{Pattern:dls,Color:15},{Pattern:bo,Color:0}]}}'
+    packages:
+      zero:
+        name: '0 (Zero)'
+        icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ts,Color:15},{Pattern:bs,Color:15},{Pattern:dls,Color:15},{Pattern:bo,Color:0}]}}'
+      one:
+        name: '1 (One)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"cs"},{Color:15,Pattern:"tl"},{Color:0,Pattern:"cbo"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"bo"}]}}'
+      two:
+        name: '2 (Two)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ts"},{Color:0,Pattern:"mr"},{Color:15,Pattern:"bs"},{Color:15,Pattern:"dls"},{Color:0,Pattern:"bo"}]}}'
+      three:
+        name: '3 (Three)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"vhr"},{Color:15,Pattern:"sc"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"bs"},{Color:0,Pattern:"bo"}]}}'
+      four:
+        name: '4 (Four)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"rs"},{Color:15,Pattern:"hh"},{Color:0,Pattern:"cs"},{Color:15,Pattern:"ms"},{Color:0,Pattern:"bo"}]}}'
+      five:
+        name: '5 (Five)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"vhr"},{Color:0,Pattern:"hh"},{Color:15,Pattern:"bs"},{Color:15,Pattern:"drs"},{Color:15,Pattern:"ts"},{Color:0,Pattern:"bo"}]}}'
+      six:
+        name: '6 (Six)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"mr"},{Color:15,Pattern:"ms"},{Color:0,Pattern:"hh"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:0,Pattern:"bo"}]}}'
+      seven:
+        name: '7 (Seven)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"dls"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"bl"},{Color:0,Pattern:"bo"}]}}'
+      eight:
+        name: '8 (Eight)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bs"},{Color:15,Pattern:"rs"},{Color:15,Pattern:"ls"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"ms"},{Color:0,Pattern:"bo"}]}}'
+      nine:
+        name: '9 (Nine)'
+        icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ls"},{Color:0,Pattern:"hhb"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"rs"},{Color:15,Pattern:"ms"},{Color:0,Pattern:"bo"}]}}'
+  derp:
+    name: 'Derp'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"mc"},{Color:0,Pattern:"flo"},{Color:0,Pattern:"bri"},{Color:0,Pattern:"flo"},{Color:0,Pattern:"bri"},{Color:0,Pattern:"tt"}]}}'
+  netherportal:
+    name: 'Nether Portal'
+    icon: '425 : nbt>{BlockEntityTag:{Base:5,Patterns:[{Pattern:ss,Color:13},{Pattern:bri,Color:5},{Pattern:cbo,Color:13},{Pattern:bo,Color:0}]}}'
+  duck:
+    name: 'Duck'
+    icon: '425 : nbt>{BlockEntityTag:{Base:11,Patterns:[{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:hhb,Color:14},{Pattern:bo,Color:11},{Pattern:bs,Color:11},{Pattern:ms,Color:14}]}}'
+  chicken:
+    name: 'Chiken'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:ts,Color:0},{Pattern:cs,Color:15},{Pattern:ms,Color:14},{Pattern:hhb,Color:1},{Pattern:bo,Color:15},{Pattern:ms,Color:11},{Pattern:bs,Color:15}]}}'
+  lightpurple:
+    name: 'Purple Lightsaber'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:ss,Color:5},{Pattern:bo,Color:5},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bl,Color:0},{Pattern:br,Color:0}]}}'
+  lightgreen:
+    name: 'Green Lightsaber'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:ss,Color:2},{Pattern:bo,Color:2},{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:bl,Color:0},{Pattern:br,Color:0}]}}'
+  radioactive:
+    name: 'Radioactive'
+    icon: '425 : nbt>{BlockEntityTag:{Base:11,Patterns:[{Pattern:ld,Color:0},{Pattern:rud,Color:0},{Pattern:hh,Color:11},{Pattern:tt,Color:0}]}}'
+  pencil:
+    name: 'Pencil'
+    icon: '425 : nbt>{BlockEntityTag:{Base:11,Patterns:[{Pattern:vh,Color:3},{Pattern:sc,Color:14},{Pattern:cre,Color:8},{Pattern:ms,Color:7},{Pattern:sku,Color:7},{Pattern:hh,Color:9},{Pattern:rs,Color:15},{Pattern:ls,Color:15},{Pattern:ts,Color:15},{Pattern:ls,Color:15},{Pattern:rs,Color:15},{Pattern:ts,Color:15}]}}'
+  penguin:
+    name: 'Penguin'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:flo,Color:15},{Pattern:hhb,Color:0},{Pattern:mc,Color:0},{Pattern:bt,Color:15},{Pattern:mr,Color:14}]}}'
+  bricks:
+    name: 'Wall of Bricks'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:bri,Color:1}]}}'
+  yinyang:
+    name: 'Yin Yang'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:rd,Color:15},{Pattern:tl,Color:15},{Pattern:br,Color:0},{Pattern:tts,Color:0},{Pattern:bts,Color:15},{Pattern:ls,Color:0},{Pattern:rs,Color:15}]}}'
+  knife:
+    name: 'Knife'
+    icon: '425 : nbt>{BlockEntityTag:{Base:8,Patterns:[{Pattern:gra,Color:7},{Pattern:vh,Color:8},{Pattern:tts,Color:8},{Pattern:rs,Color:8},{Pattern:br,Color:0},{Pattern:rs,Color:8}]}}'
+  enderman:
+    name: 'Enderman'
+    icon: '425 : nbt>{BlockEntityTag:{Base:5,Patterns:[{Pattern:sc,Color:0},{Pattern:ss,Color:5},{Pattern:ss,Color:0},{Pattern:tt,Color:13},{Pattern:sku,Color:0},{Pattern:cre,Color:0},{Pattern:flo,Color:0},{Pattern:rs,Color:13},{Pattern:ls,Color:13},{Pattern:ts,Color:13}]}}'
+  batman1992:
+    name: 'Batman - 1992'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:cs,Color:11},{Pattern:tt,Color:11},{Pattern:ss,Color:0},{Pattern:mr,Color:0},{Pattern:bts,Color:11},{Pattern:tts,Color:11}]}}'
+  batman1995:
+    name: 'Batman - 1995'
+    icon: '425 : nbt>{BlockEntityTag:{Base:7,Patterns:[{Pattern:cbo,Color:0},{Pattern:bs,Color:0},{Pattern:bts,Color:7},{Pattern:cs,Color:0},{Pattern:tt,Color:7},{Pattern:ts,Color:7}]}}'
+  fox:
+    name: 'Fox'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:mr,Color:0},{Pattern:cbo,Color:14},{Pattern:mc,Color:14},{Pattern:cre,Color:14},{Pattern:tt,Color:14}]}}'
+  flash:
+    name: 'Flash'
+    icon: '425 : nbt>{BlockEntityTag:{Base:11,Patterns:[{Pattern:tr,Color:1},{Pattern:bl,Color:1},{Pattern:ls,Color:1},{Pattern:rs,Color:1},{Pattern:bts,Color:1},{Pattern:tts,Color:1}]}}'
+  chat:
+    name: 'Chat'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:bo,Color:1},{Pattern:bo,Color:1},{Pattern:bs,Color:1},{Pattern:mr,Color:15},{Pattern:ts,Color:1},{Pattern:bl,Color:1}]}}'
+  octopus:
+    name: 'Octopus'
+    icon: '425 : nbt>{BlockEntityTag:{Base:1,Patterns:[{Pattern:bt,Color:4},{Pattern:ss,Color:1},{Pattern:ms,Color:15},{Pattern:cbo,Color:4},{Pattern:mc,Color:1},{Pattern:bo,Color:4}]}}'
+  heart:
+    name: 'Geart'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:mr,Color:1},{Pattern:mr,Color:1},{Pattern:tt,Color:0},{Pattern:bo,Color:0},{Pattern:tt,Color:0}]}}'
+  pokeball:
+    name: 'Pokeball'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:hh,Color:1},{Pattern:mr,Color:0},{Pattern:ms,Color:0},{Pattern:ms,Color:0},{Pattern:ts,Color:1},{Pattern:bs,Color:15},{Pattern:mc,Color:15}]}}'
+  skull:
+    name: 'Skull'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:sku,Color:15}]}}'
+  kingofskull:
+    name: 'King of Skull'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:7,Pattern:"cbo"},{Color:11,Pattern:"cs"},{Color:0,Pattern:"bs"},{Color:15,Pattern:"cre"},{Color:11,Pattern:"ts"},{Color:0,Pattern:"tts"}]}}'
+  deadpool:
+    name: 'Deadpool'
+    icon: '425 : nbt>{BlockEntityTag:{Base:0,Patterns:[{Pattern:ms,Color:15},{Pattern:cs,Color:1},{Pattern:cbo,Color:0},{Pattern:tt,Color:1},{Pattern:bt,Color:1}]}}'
+  pineapple:
+    name: 'Pineapple'
+    icon: '425 : nbt>{BlockEntityTag:{Base:14,Patterns:[{Pattern:bri,Color:11},{Pattern:hh,Color:12},{Pattern:flo,Color:10},{Pattern:bo,Color:12},{Pattern:mc,Color:10},{Pattern:cbo,Color:12}]}}'
+  carrot:
+    name: 'Carrot'
+    icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:2,Pattern:"ls"},{Color:0,Pattern:"mr"},{Color:0,Pattern:"hhb"},{Color:14,Pattern:"mc"},{Color:0,Pattern:"rud"},{Color:0,Pattern:"cbo"}]}}'
+  watermelon:
+    name: 'Watermelon'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:10,Pattern:"mr"},{Color:1,Pattern:"mc"},{Color:0,Pattern:"ld"},{Color:0,Pattern:"bs"}]}}'
+  orange:
+    name: 'Orange'
+    icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:14,Pattern:"mr"},{Color:15,Pattern:"bs"},{Color:15,Pattern:"ts"},{Color:2,Pattern:"tr"},{Color:15,Pattern:"cbo"},{Color:15,Pattern:"tts"}]}}'
+  bowtie:
+    name: 'Bow Tie'
+    icon: '425 : nbt>{BlockEntityTag:{Base:15,Patterns:[{Pattern:ls,Color:0},{Pattern:rs,Color:0},{Pattern:ms,Color:15},{Pattern:bs,Color:15},{Pattern:sku,Color:0},{Pattern:hh,Color:15}]}}'
+  cat:
+    name: 'Cat'
+    icon: '425:8 : nbt>{BlockEntityTag:{Patterns:[{Color:12,Pattern:"tts"},{Color:12,Pattern:"tl"},{Color:12,Pattern:"cbo"},{Color:10,Pattern:"bs"},{Color:8,Pattern:"moj"},{Color:3,Pattern:"bts"}]}}'
+  bee:
+    name: 'Bee'
+    icon: '425:11 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"ss"},{Color:15,Pattern:"ts"},{Color:15,Pattern:"bs"},{Color:10,Pattern:"cbo"},{Color:10,Pattern:"bl"},{Color:10,Pattern:"tl"}]}}'
+  rabbit:
+    name: 'Rabbit'
+    icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"mc"},{Color:15,Pattern:"flo"},{Color:0,Pattern:"tt"},{Color:15,Pattern:"cr"},{Color:0,Pattern:"cbo"},{Color:15,Pattern:"bts"}]}}'
+  fishingrod:
+    name: 'Fishing Rod'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:0,Pattern:"mr"},{Color:1,Pattern:"br"},{Color:0,Pattern:"lud"},{Color:3,Pattern:"dls"},{Color:0,Pattern:"ld"},{Color:0,Pattern:"cbo"}]}}'
+  zombie:
+    name: 'Zombie'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:2,Pattern:"sku"},{Color:4,Pattern:"bs"},{Color:12,Pattern:"cre"},{Color:0,Pattern:"ls"},{Color:0,Pattern:"rs"},{Color:0,Pattern:"gra"}]}}'
+  pigman:
+    name: 'Pigman'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:2,Pattern:"ls"},{Color:15,Pattern:"cbo"},{Color:9,Pattern:"vhr"},{Color:0,Pattern:"sc"},{Color:9,Pattern:"cs"},{Color:2,Pattern:"bt"}]}}'
+  cauldron:
+    name: 'Cauldron'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:3,Pattern:"dls"},{Color:0,Pattern:"rd"},{Color:7,Pattern:"hhb"},{Color:0,Pattern:"cbo"},{Color:14,Pattern:"bts"}]}}'
+  flame:
+    name: 'Flames'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:14,Pattern:"moj"},{Color:0,Pattern:"bri"},{Color:14,Pattern:"bt"},{Color:0,Pattern:"mr"},{Color:14,Pattern:"gru"},{Color:11,Pattern:"bts"}]}}'
+  riceballs:
+    name: 'Rice Balls'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:3,Pattern:"dls"},{Color:0,Pattern:"cr"},{Color:15,Pattern:"mc"},{Color:1,Pattern:"hhb"},{Color:0,Pattern:"cbo"},{Color:0,Pattern:"bs"}]}}'
+  door:
+    name: 'Door'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"bri"},{Color:4,Pattern:"hhb"},{Color:0,Pattern:"sc"},{Color:4,Pattern:"sc"},{Color:0,Pattern:"bo"},{Color:4,Pattern:"bo"}]}}'
+  shield:
+    name: 'Shield'
+    icon: '425:3 : nbt>{BlockEntityTag:{Patterns:[{Color:7,Pattern:"bri"},{Color:3,Pattern:"cs"},{Color:3,Pattern:"ss"},{Color:3,Pattern:"ss"},{Color:7,Pattern:"bo"}]}}'
+  deagle:
+    name: 'Desert Eagle'
+    icon: '425:7 : nbt>{BlockEntityTag:{Patterns:[{Color:8,Pattern:"flo"},{Color:3,Pattern:"dls"},{Color:7,Pattern:"rud"},{Color:0,Pattern:"drs"},{Color:7,Pattern:"br"},{Color:7,Pattern:"cbo"}]}}'
+  mirror:
+    name: 'Mirror'
+    icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:12,Pattern:"dls"},{Color:15,Pattern:"dls"},{Color:14,Pattern:"bo"}]}}'
+  smiley:
+    name: 'Smiley'
+    icon: '425:15 : nbt>{BlockEntityTag:{Patterns:[{Color:11,Pattern:"sc"},{Color:11,Pattern:"ts"},{Color:11,Pattern:"hhb"},{Color:0,Pattern:"moj"},{Color:11,Pattern:"ms"},{Color:11,Pattern:"tt"}]}}'
+  boat:
+    name: 'Boat'
+    icon: '425:7 : nbt>{BlockEntityTag:{Patterns:[{Color:12,Pattern:"ts"},{Color:3,Pattern:"sc"},{Color:15,Pattern:"vh"},{Color:3,Pattern:"hhb"},{Color:12,Pattern:"cbo"},{Color:4,Pattern:"bs"}]}}'
+  diamond:
+    name: 'Diamond'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:4,Pattern:"flo"},{Color:12,Pattern:"ms"},{Color:12,Pattern:"flo"},{Color:4,Pattern:"mr"},{Color:12,Pattern:"mr"},{Color:0,Pattern:"ts"}]}}'
+  diamondsword:
+    name: 'Diamond Sword'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:11,Pattern:"flo"},{Color:0,Pattern:"hhb"},{Color:12,Pattern:"cs"},{Color:0,Pattern:"tr"},{Color:0,Pattern:"tl"}]}}'
+  icecream:
+    name: 'Ice Cream'
+    icon: '425:9 : nbt>{BlockEntityTag:{Patterns:[{Color:3,Pattern:"mr"},{Color:15,Pattern:"ms"},{Color:9,Pattern:"hh"},{Color:15,Pattern:"mc"},{Color:15,Pattern:"bo"},{Color:9,Pattern:"bo"}]}}'
+  eyes:
+    name: 'Eyes'
+    icon: '425 : nbt>{BlockEntityTag:{Patterns:[{Color:15,Pattern:"ms"},{Color:5,Pattern:"flo"},{Color:0,Pattern:"cbo"},{Color:0,Pattern:"cr"},{Color:0,Pattern:"cre"},{Color:0,Pattern:"hh"}]}}'
